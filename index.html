@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.jpeg">
   <title>AYOTI · software a tu medida</title>
   <style>
     /* === RESET / BASE === */
@@ -34,27 +35,29 @@
     .header-empresa {
       display: flex;
       align-items: center;
-      gap: 1.2rem;
-      margin-bottom: 1.8rem;
+      justify-content: center; /* Centra todo horizontalmente */
+      gap: 1.5rem;
+      margin-bottom: 2rem;
       flex-wrap: wrap;
       background: linear-gradient(90deg, #f0f6ff 0%, #ffffff 80%);
-      padding: 1rem 1.8rem;
-      border-radius: 3rem;
+      padding: 1.8rem 1.8rem;
+      border-radius: 4rem;
       border: 1px solid #d6e3f5;
     }
 
-    /* Estilo para la imagen del logo */
+    /* Estilo para la imagen del logo - MÁS GRANDE */
     .logo-img {
-      width: 70px;
-      height: 70px;
+      width: 120px;
+      height: 120px;
       border-radius: 30%;
       object-fit: cover;
-      border: 2px solid #acc9f0;
+      border: 3px solid #acc9f0;
       background: #fff;
+      box-shadow: 0 8px 16px rgba(0,40,80,0.15);
     }
 
     .nombre-empresa {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       background: linear-gradient(145deg, #0f2b4f, #214b7a);
@@ -65,13 +68,13 @@
 
     .eslogan-header {
       color: #2e4b74;
-      font-weight: 400;
-      margin-left: auto;
-      font-size: 1.1rem;
+      font-weight: 500;
+      font-size: 1.2rem;
       background: rgba(255,255,255,0.7);
-      padding: 0.3rem 1.2rem;
-      border-radius: 30px;
+      padding: 0.4rem 1.5rem;
+      border-radius: 40px;
       border: 1px dashed #abc0d9;
+      text-align: center;
     }
 
     /* === TIPOGRAFÍA === */
@@ -324,17 +327,33 @@
       .contenedor { padding: 1.5rem 1rem; }
       h1 { font-size: 1.9rem; }
       .hero p { max-width: 100%; }
-      .header-empresa { flex-direction: column; align-items: flex-start; }
-      .eslogan-header { margin-left: 0; }
+      
+      /* Centrar todo en el header en móviles */
+      .header-empresa { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
+      }
+      
+      .logo-img {
+        width: 150px;  /* Aún más grande en móvil */
+        height: 150px;
+      }
+      
+      .eslogan-header { 
+        margin-left: 0; 
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 <div class="contenedor">
   
-  <!-- HEADER CON LOGO (foto) Y NOMBRE AYOTI -->
+  <!-- HEADER CON LOGO GRANDE Y CENTRADO -->
   <div class="header-empresa">
-    <!-- Logo en foto: usando una imagen de placeholder con estilo de logo tecnológico -->
     <img 
       src="logo.jpeg" 
       alt="AYOTI logo" 
@@ -436,24 +455,6 @@
   <div style="background: #ffffff; border-radius: 2rem; padding: 1.5rem 2rem; border: 1px solid #cbdff5; margin-bottom: 2rem;">
     <p><strong>📱 Aplicaciones móviles:</strong> También desarrollamos apps para Android y otras plataformas. Ideales para gestión empresarial desde el celular, aplicaciones para clientes, sistemas internos para empleados y automatización de servicios. Pueden integrarse con tu sistema web.</p>
     <p style="margin-top: 1rem;"><strong>🖥️ Software web con base de datos:</strong> El precio final depende del nivel de complejidad, cantidad de módulos, integraciones adicionales y funcionalidades personalizadas. <em>Cada proyecto se cotiza según los requerimientos específicos del cliente.</em></p>
-  </div>
-
-  <!-- BLOQUE OPTIMIZACIÓN CON NÚMERO WHATSAPP COLOMBIA +57 3493424583 -->
-  <div style="display: flex; flex-wrap: wrap; gap: 1.8rem; background: #eaf1fb; border-radius: 2rem; padding: 2rem; margin: 2rem 0;">
-    <div style="flex: 1; min-width: 240px;">
-      <h3 style="margin-top: 0;">✨ Optimización y mejora de sistemas existentes</h3>
-      <p>Si ya cuentas con página web o software, también ofrecemos: optimización de rendimiento (más velocidad y mejor eficiencia), mejora de diseño y experiencia de usuario, automatización de procesos para hacer tu sistema más inteligente, actualización tecnológica. <strong>Hacemos que tu sistema sea más moderno, seguro y eficiente.</strong></p>
-    </div>
-    <div style="flex: 1; min-width: 200px; background: #ffffffb0; padding: 1.4rem; border-radius: 1.8rem; text-align: center;">
-      <p style="font-weight: 600; color: #002856;">🔧 Automatización · UI/UX · Velocidad · Seguridad</p>
-      <!-- Número de WhatsApp Colombia +57 3493424583 -->
-      <a href="https://wa.me/573493424583?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20optimizaci%C3%B3n%20y%20mejora%20de%20sistemas" 
-         target="_blank" 
-         class="whatsapp-link">
-        <span style="font-size:1.5rem;">📞</span> +57 349 3424583
-      </a>
-      <p style="margin-top: 1rem; font-size:0.9rem;">Consulta mejora continua por WhatsApp</p>
-    </div>
   </div>
 
   <!-- EXTRAS: badges de inversión -->
