@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevSolutions · software a tu medida</title>
+  <style>
+    /* === RESET / BASE === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f8fc;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1a2639;
+      padding: 1.5rem;
+    }
+
+    .contenedor {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 2.5rem 2.5rem 2rem 2rem;
+      box-shadow: 0 20px 40px -10px rgba(0, 20, 50, 0.15);
+      overflow: hidden;
+      padding: 2.5rem 2rem;
+    }
+
+    /* === TIPOGRAFÍA === */
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(145deg, #0b1e33, #1e3a6f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #0b2b4a;
+      border-left: 6px solid #3b82f6;
+      padding-left: 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #1e3a6f;
+      margin-top: 1.8rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .subtitulo {
+      font-size: 1.2rem;
+      color: #2c3e5c;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      border-bottom: 2px dashed #cbd5e1;
+      padding-bottom: 0.75rem;
+    }
+
+    /* === HERO / INTRO === */
+    .hero {
+      background: linear-gradient(135deg, #eef2f9 0%, #ffffff 100%);
+      padding: 1.8rem 2rem;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #1e293b;
+      max-width: 85%;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero strong {
+      color: #1e4a7a;
+    }
+
+    /* === TARJETAS SERVICIOS === */
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1.8rem;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e9eef3;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #b3d0f0;
+      box-shadow: 0 20px 30px -8px rgba(45, 114, 210, 0.15);
+    }
+
+    .card .emoji-tag {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0c4a6e;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #dbeafe;
+      padding-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #2d3c54;
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+
+    .card ul {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .card li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.6rem;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .card li::before {
+      content: "▹";
+      color: #3b82f6;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .precio-badge {
+      background: #e6f0ff;
+      color: #004080;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 3rem;
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      border: 1px solid #b8d1fd;
+    }
+
+    .nota-precio {
+      font-size: 0.9rem;
+      color: #4b556b;
+      background: #f8fafc;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    /* === SECCIONES DE TEXTO LARGO (PAGO, MANTENIMIENTO) === */
+    .info-block {
+      background: #f1f6fd;
+      border-radius: 2rem;
+      padding: 2rem 2.2rem;
+      margin: 2.5rem 0;
+    }
+
+    .info-block p {
+      margin: 1rem 0;
+      font-size: 1.08rem;
+    }
+
+    .highlight {
+      background: white;
+      border-radius: 1.4rem;
+      padding: 1.5rem 2rem;
+      box-shadow: inset 0 0 0 1px #d4e2f0;
+    }
+
+    .cuota-ejemplo {
+      background: #1e2b47;
+      color: white;
+      border-radius: 1.5rem;
+      padding: 1.5rem 2rem;
+      margin: 1.8rem 0;
+      font-weight: 400;
+    }
+
+    .cuota-ejemplo span {
+      color: #ffd966;
+      font-weight: 600;
+      background: rgba(255,255,255,0.1);
+      padding: 0.2rem 0.8rem;
+      border-radius: 2rem;
+      margin: 0 0.2rem;
+    }
+
+    .rango-mant {
+      background: #dee9fc;
+      color: #02274b;
+      font-weight: 700;
+      padding: 0.3rem 1.2rem;
+      border-radius: 3rem;
+      display: inline-block;
+      margin: 0.5rem 0;
+      border: 1px solid #7ba9f0;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #dce5f0;
+      margin: 2.2rem 0 1rem;
+    }
+
+    /* === PIE DE PÁGINA (OPCIÓN CONTACTO) === */
+    .footer-note {
+      margin-top: 3rem;
+      text-align: center;
+      color: #4a5a72;
+      font-size: 1rem;
+      background: #f0f4fa;
+      padding: 1.5rem;
+      border-radius: 3rem;
+    }
+
+    .footer-note a {
+      color: #1d4ed8;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #a5c9ff;
+    }
+
+    /* === RESPONSIVE EXTRA === */
+    @media (max-width: 600px) {
+      body { padding: 0.5rem; }
+      .contenedor { padding: 1.5rem 1rem; }
+      h1 { font-size: 1.9rem; }
+      .hero p { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="contenedor">
+  
+  <!-- ENCABEZADO PRINCIPAL -->
+  <h1>💻 Desarrollo de Software · Páginas Web · Apps Móviles</h1>
+  <div class="hero">
+    <p><strong>Desarrollamos soluciones tecnológicas modernas, seguras y adaptadas</strong> a las necesidades de tu negocio.</p>
+    <p>Nuestro objetivo es ayudarte a digitalizar tus procesos, mejorar tu imagen profesional y aumentar tus ventas mediante herramientas inteligentes y eficientes.</p>
+    <p style="margin-top: 1rem;">Creamos desde páginas informativas hasta sistemas empresariales completos con almacenamiento de datos, inventarios, panel administrativo y aplicaciones móviles.</p>
+  </div>
+
+  <!-- SERVICIOS EN TARJETAS (lo medular) -->
+  <h2>⚙️ Nuestros servicios</h2>
+  <div class="servicios-grid">
+    
+    <!-- PÁGINA WEB ESTÁTICA -->
+    <div class="card">
+      <div class="emoji-tag">🌐</div>
+      <h4>Página Web Estática (Informativa)</h4>
+      <p>Ideal para negocios o profesionales que desean tener presencia en internet mostrando únicamente información de su empresa o servicios.</p>
+      <ul>
+        <li>Diseño profesional y personalizado</li>
+        <li>Adaptación a dispositivos móviles (responsive)</li>
+        <li>Secciones: inicio, servicios, contacto</li>
+        <li>Optimización básica de velocidad</li>
+        <li>Publicación en internet</li>
+      </ul>
+      <div class="precio-badge">💰 Inversión mínima: $800.000 COP</div>
+      <div class="nota-precio">* Solo muestra información, no almacena datos ni tiene panel.</div>
+    </div>
+
+    <!-- SOFTWARE WEB CON BD -->
+    <div class="card">
+      <div class="emoji-tag">🖥️</div>
+      <h4>Software Web con Base de Datos</h4>
+      <p>Para empresas que necesitan algo más avanzado que una página informativa.</p>
+      <ul>
+        <li>Gestión de inventarios</li>
+        <li>Registro y administración de productos</li>
+        <li>Sistema de usuarios / panel administrativo</li>
+        <li>Reportes y estadísticas</li>
+        <li>Almacenamiento seguro + automatización</li>
+      </ul>
+      <div class="precio-badge">💰 Desde $1.500.000 COP hasta +$2.000.000 COP</div>
+      <div class="nota-precio">Precio final según complejidad, módulos e integraciones.</div>
+    </div>
+
+    <!-- APLICACIONES MÓVILES -->
+    <div class="card">
+      <div class="emoji-tag">📱</div>
+      <h4>Desarrollo de Aplicaciones Móviles</h4>
+      <p>Android y otras plataformas, ideales para gestión empresarial, apps para clientes, sistemas internos para empleados y automatización.</p>
+      <ul>
+        <li>Integración con sistema web</li>
+        <li>Solución completa y profesional</li>
+        <li>Gestión desde el celular</li>
+      </ul>
+      <div class="precio-badge">📲 Valor según funcionalidades</div>
+      <p style="margin-top: 0.8rem;">Consulta tu proyecto sin compromiso.</p>
+    </div>
+
+    <!-- OPTIMIZACIÓN Y MEJORA -->
+    <div class="card">
+      <div class="emoji-tag">🚀</div>
+      <h4>Optimización y Mejora</h4>
+      <p>Si ya cuentas con web o software, modernizamos y optimizamos.</p>
+      <ul>
+        <li>Más velocidad y eficiencia</li>
+        <li>Mejora de diseño (UX/UI)</li>
+        <li>Automatización de procesos</li>
+        <li>Actualización tecnológica</li>
+      </ul>
+      <div class="nota-precio">Presupuesto personalizado · haz tu sistema más seguro y moderno.</div>
+    </div>
+  </div>
+
+  <!-- DETALLES DE PRECIO Y MODALIDAD DE PAGO (según texto original) -->
+  <h2>💳 Modalidad de Pago Flexible</h2>
+  <div class="info-block">
+    <p>Ofrecemos opción de pago por cuotas para facilitar la adquisición del software.</p>
+    <div class="cuota-ejemplo">
+      <p>✨ <strong>Ejemplo:</strong> Si adquieres un software con valor de <span>$1.500.000 COP</span>, puedes pagar una suscripción mensual de <span>$90.000 COP</span> hasta completar el valor total del desarrollo.</p>
+    </div>
+    <div class="highlight">
+      <p>✅ Una vez cancelado el valor total del software, el pago mensual se reduce a un valor de mantenimiento que oscila entre:</p>
+      <p class="rango-mant">💰 $40.000 y $50.000 COP mensuales</p>
+      <p style="margin-top: 0.8rem;"><strong>El valor de mantenimiento depende de:</strong> nivel de soporte, actualizaciones, hosting/almacenamiento y complejidad del sistema.</p>
+    </div>
+  </div>
+
+  <!-- RECORDATORIO SOBRE APPS Y PRESUPUESTOS (texto adicional del prompt) -->
+  <h2>📌 Desarrollo a medida</h2>
+  <div style="background: #ffffff; border-radius: 2rem; padding: 1.5rem 2rem; border: 1px solid #cbdff5; margin-bottom: 2rem;">
+    <p><strong>📱 Aplicaciones móviles:</strong> También desarrollamos apps para Android y otras plataformas. Ideales para gestión empresarial desde el celular, aplicaciones para clientes, sistemas internos para empleados y automatización de servicios. Pueden integrarse con tu sistema web.</p>
+    <p style="margin-top: 1rem;"><strong>🖥️ Software web con base de datos:</strong> El precio final depende del nivel de complejidad, cantidad de módulos, integraciones adicionales y funcionalidades personalizadas. <em>Cada proyecto se cotiza según los requerimientos específicos del cliente.</em></p>
+  </div>
+
+  <!-- TEXTO LITERAL INCLUIDO:  "Optimización y mejora de sistemas existentes" ya está arriba, pero lo reforzamos -->
+  <div style="display: flex; flex-wrap: wrap; gap: 1.8rem; background: #eaf1fb; border-radius: 2rem; padding: 2rem; margin: 2rem 0;">
+    <div style="flex: 1; min-width: 240px;">
+      <h3 style="margin-top: 0;">✨ Optimización y mejora de sistemas existentes</h3>
+      <p>Si ya cuentas con página web o software, también ofrecemos: optimización de rendimiento (más velocidad y mejor eficiencia), mejora de diseño y experiencia de usuario, automatización de procesos para hacer tu sistema más inteligente, actualización tecnológica. <strong>Hacemos que tu sistema sea más moderno, seguro y eficiente.</strong></p>
+    </div>
+    <div style="flex: 1; min-width: 200px; background: #ffffffb0; padding: 1.4rem; border-radius: 1.8rem;">
+      <p style="font-weight: 600; color: #002856;">🔧 Automatización · UI/UX · Velocidad · Seguridad</p>
+      <p class="rango-mant" style="background: #1d4ed8; color: white; border: none;">Consulta mejora continua</p>
+    </div>
+  </div>
+
+  <!-- EXTRAS: inversión y mantenimiento en detalle -->
+  <hr>
+  <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
+    <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">🌐 Pág. estática: $800.000</span></div>
+    <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">🖥️ Software web: desde $1.500.000</span></div>
+    <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">📱 Apps: cotizar</span></div>
+  </div>
+
+  <!-- PIE DE PÁGINA CON LLAMADO (sin formulario, sólo contacto conceptual) -->
+  <div class="footer-note">
+    💡 ¿Tienes un proyecto en mente? <a href="#">Escríbenos para una asesoría sin costo</a> · pago por cuotas disponible · <strong>desarrollo seguro y moderno</strong>
+  </div>
+
+  <!-- NOTA FINAL: todos los textos del prompt están incluidos -->
+  <p style="text-align: right; font-size: 0.85rem; margin-top: 1rem; color: #7b8ba3;">DevSolutions · tecnología que impulsa tu negocio</p>
+
+</div>
+</body>
+</html>
