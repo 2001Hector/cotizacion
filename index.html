@@ -43,32 +43,14 @@
       border: 1px solid #d6e3f5;
     }
 
-    .logo-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #102a41;
-      width: 70px;
-      height: 70px;
-      border-radius: 30%;
-      font-size: 2.2rem;
-      color: white;
-      box-shadow: 0 6px 12px rgba(0,40,80,0.2);
-    }
-
-    /* Simulación de logo.jpeg: si tienes el archivo real, reemplaza el div por <img src="logo.jpeg"> */
+    /* Estilo para la imagen del logo */
     .logo-img {
       width: 70px;
       height: 70px;
       border-radius: 30%;
-      background: #102a41;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: #ffd966;
-      font-weight: 600;
+      object-fit: cover;
       border: 2px solid #acc9f0;
+      background: #fff;
     }
 
     .nombre-empresa {
@@ -350,11 +332,14 @@
 <body>
 <div class="contenedor">
   
-  <!-- HEADER CON LOGO Y NOMBRE AYOTI (logo.jpeg representado) -->
+  <!-- HEADER CON LOGO (foto) Y NOMBRE AYOTI -->
   <div class="header-empresa">
-    <!-- Si tienes el archivo logo.jpeg en la misma carpeta, descomenta la línea img y comenta el div .logo-img -->
-    <!-- <img src="logo.jpeg" alt="AYOTI logo" style="width:70px; height:70px; border-radius:30%; object-fit: cover;"> -->
-    <div class="logo-img">AY</div>  <!-- representación del logo mientras tanto -->
+    <!-- Logo en foto: usando una imagen de placeholder con estilo de logo tecnológico -->
+    <img 
+      src="https://placehold.co/200x200/1e3a6f/white/png?text=AYOTI&font=montserrat" 
+      alt="AYOTI logo" 
+      class="logo-img"
+    >
     <span class="nombre-empresa">AYOTI</span>
     <span class="eslogan-header">Automatización y Optimización Tecnológica Integral</span>
   </div>
@@ -489,9 +474,6 @@
       <span>📲</span> +57 349 3424583
     </a>
   </div>
-
-  <!-- NOTA FINAL: se hace referencia a logo.jpeg; si tienes el archivo, descomentar en header -->
-  <p style="text-align: right; font-size: 0.8rem; margin-top: 1rem; color: #7b8ba3;">Tecnología que impulsa tu negocio · reemplaza el cuadro AY por logo.jpeg si lo deseas</p>
 
 </div>
 </body>
