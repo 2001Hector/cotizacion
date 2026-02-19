@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevSolutions · software a tu medida</title>
+  <title>AYOTI · software a tu medida</title>
   <style>
     /* === RESET / BASE === */
     * {
@@ -28,6 +28,68 @@
       box-shadow: 0 20px 40px -10px rgba(0, 20, 50, 0.15);
       overflow: hidden;
       padding: 2.5rem 2rem;
+    }
+
+    /* === HEADER CON LOGO Y NOMBRE === */
+    .header-empresa {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+      background: linear-gradient(90deg, #f0f6ff 0%, #ffffff 80%);
+      padding: 1rem 1.8rem;
+      border-radius: 3rem;
+      border: 1px solid #d6e3f5;
+    }
+
+    .logo-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #102a41;
+      width: 70px;
+      height: 70px;
+      border-radius: 30%;
+      font-size: 2.2rem;
+      color: white;
+      box-shadow: 0 6px 12px rgba(0,40,80,0.2);
+    }
+
+    /* Simulación de logo.jpeg: si tienes el archivo real, reemplaza el div por <img src="logo.jpeg"> */
+    .logo-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 30%;
+      background: #102a41;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #ffd966;
+      font-weight: 600;
+      border: 2px solid #acc9f0;
+    }
+
+    .nombre-empresa {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(145deg, #0f2b4f, #214b7a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .eslogan-header {
+      color: #2e4b74;
+      font-weight: 400;
+      margin-left: auto;
+      font-size: 1.1rem;
+      background: rgba(255,255,255,0.7);
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+      border: 1px dashed #abc0d9;
     }
 
     /* === TIPOGRAFÍA === */
@@ -231,22 +293,47 @@
       margin: 2.2rem 0 1rem;
     }
 
-    /* === PIE DE PÁGINA (OPCIÓN CONTACTO) === */
+    /* === BOTÓN / ENLACE WHATSAPP (COLOMBIA) === */
+    .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #25D366;
+      color: white;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border: 1px solid #128C7E;
+      transition: 0.15s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .whatsapp-link:hover {
+      background: #20b859;
+      transform: scale(1.02);
+    }
+
+    .whatsapp-link i {
+      font-size: 1.4rem;
+    }
+
+    /* === PIE DE PÁGINA === */
     .footer-note {
       margin-top: 3rem;
-      text-align: center;
-      color: #4a5a72;
-      font-size: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       background: #f0f4fa;
-      padding: 1.5rem;
+      padding: 1.2rem 2rem;
       border-radius: 3rem;
     }
 
-    .footer-note a {
-      color: #1d4ed8;
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 2px solid #a5c9ff;
+    .footer-note p {
+      color: #1f3a5f;
+      font-weight: 500;
     }
 
     /* === RESPONSIVE EXTRA === */
@@ -255,12 +342,23 @@
       .contenedor { padding: 1.5rem 1rem; }
       h1 { font-size: 1.9rem; }
       .hero p { max-width: 100%; }
+      .header-empresa { flex-direction: column; align-items: flex-start; }
+      .eslogan-header { margin-left: 0; }
     }
   </style>
 </head>
 <body>
 <div class="contenedor">
   
+  <!-- HEADER CON LOGO Y NOMBRE AYOTI (logo.jpeg representado) -->
+  <div class="header-empresa">
+    <!-- Si tienes el archivo logo.jpeg en la misma carpeta, descomenta la línea img y comenta el div .logo-img -->
+    <!-- <img src="logo.jpeg" alt="AYOTI logo" style="width:70px; height:70px; border-radius:30%; object-fit: cover;"> -->
+    <div class="logo-img">AY</div>  <!-- representación del logo mientras tanto -->
+    <span class="nombre-empresa">AYOTI</span>
+    <span class="eslogan-header">Automatización y Optimización Tecnológica Integral</span>
+  </div>
+
   <!-- ENCABEZADO PRINCIPAL -->
   <h1>💻 Desarrollo de Software · Páginas Web · Apps Móviles</h1>
   <div class="hero">
@@ -269,7 +367,7 @@
     <p style="margin-top: 1rem;">Creamos desde páginas informativas hasta sistemas empresariales completos con almacenamiento de datos, inventarios, panel administrativo y aplicaciones móviles.</p>
   </div>
 
-  <!-- SERVICIOS EN TARJETAS (lo medular) -->
+  <!-- SERVICIOS EN TARJETAS -->
   <h2>⚙️ Nuestros servicios</h2>
   <div class="servicios-grid">
     
@@ -334,7 +432,7 @@
     </div>
   </div>
 
-  <!-- DETALLES DE PRECIO Y MODALIDAD DE PAGO (según texto original) -->
+  <!-- MODALIDAD DE PAGO FLEXIBLE -->
   <h2>💳 Modalidad de Pago Flexible</h2>
   <div class="info-block">
     <p>Ofrecemos opción de pago por cuotas para facilitar la adquisición del software.</p>
@@ -348,26 +446,32 @@
     </div>
   </div>
 
-  <!-- RECORDATORIO SOBRE APPS Y PRESUPUESTOS (texto adicional del prompt) -->
+  <!-- DETALLES APPS Y PRESUPUESTO PERSONALIZADO -->
   <h2>📌 Desarrollo a medida</h2>
   <div style="background: #ffffff; border-radius: 2rem; padding: 1.5rem 2rem; border: 1px solid #cbdff5; margin-bottom: 2rem;">
     <p><strong>📱 Aplicaciones móviles:</strong> También desarrollamos apps para Android y otras plataformas. Ideales para gestión empresarial desde el celular, aplicaciones para clientes, sistemas internos para empleados y automatización de servicios. Pueden integrarse con tu sistema web.</p>
     <p style="margin-top: 1rem;"><strong>🖥️ Software web con base de datos:</strong> El precio final depende del nivel de complejidad, cantidad de módulos, integraciones adicionales y funcionalidades personalizadas. <em>Cada proyecto se cotiza según los requerimientos específicos del cliente.</em></p>
   </div>
 
-  <!-- TEXTO LITERAL INCLUIDO:  "Optimización y mejora de sistemas existentes" ya está arriba, pero lo reforzamos -->
+  <!-- BLOQUE OPTIMIZACIÓN CON NÚMERO WHATSAPP COLOMBIA +57 3493424583 -->
   <div style="display: flex; flex-wrap: wrap; gap: 1.8rem; background: #eaf1fb; border-radius: 2rem; padding: 2rem; margin: 2rem 0;">
     <div style="flex: 1; min-width: 240px;">
       <h3 style="margin-top: 0;">✨ Optimización y mejora de sistemas existentes</h3>
       <p>Si ya cuentas con página web o software, también ofrecemos: optimización de rendimiento (más velocidad y mejor eficiencia), mejora de diseño y experiencia de usuario, automatización de procesos para hacer tu sistema más inteligente, actualización tecnológica. <strong>Hacemos que tu sistema sea más moderno, seguro y eficiente.</strong></p>
     </div>
-    <div style="flex: 1; min-width: 200px; background: #ffffffb0; padding: 1.4rem; border-radius: 1.8rem;">
+    <div style="flex: 1; min-width: 200px; background: #ffffffb0; padding: 1.4rem; border-radius: 1.8rem; text-align: center;">
       <p style="font-weight: 600; color: #002856;">🔧 Automatización · UI/UX · Velocidad · Seguridad</p>
-      <p class="rango-mant" style="background: #1d4ed8; color: white; border: none;">Consulta mejora continua</p>
+      <!-- Número de WhatsApp Colombia +57 3493424583 -->
+      <a href="https://wa.me/573493424583?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20optimizaci%C3%B3n%20y%20mejora%20de%20sistemas" 
+         target="_blank" 
+         class="whatsapp-link">
+        <span style="font-size:1.5rem;">📞</span> +57 349 3424583
+      </a>
+      <p style="margin-top: 1rem; font-size:0.9rem;">Consulta mejora continua por WhatsApp</p>
     </div>
   </div>
 
-  <!-- EXTRAS: inversión y mantenimiento en detalle -->
+  <!-- EXTRAS: badges de inversión -->
   <hr>
   <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
     <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">🌐 Pág. estática: $800.000</span></div>
@@ -375,13 +479,19 @@
     <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">📱 Apps: cotizar</span></div>
   </div>
 
-  <!-- PIE DE PÁGINA CON LLAMADO (sin formulario, sólo contacto conceptual) -->
+  <!-- PIE DE PÁGINA CON WHATSAPP Y NOMBRE AYOTI -->
   <div class="footer-note">
-    💡 ¿Tienes un proyecto en mente? <a href="#">Escríbenos para una asesoría sin costo</a> · pago por cuotas disponible · <strong>desarrollo seguro y moderno</strong>
+    <p>💡 <strong>AYOTI</strong> – Automatización y Optimización Tecnológica Integral</p>
+    <a href="https://wa.me/573493424583?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20desarrollo%20de%20software" 
+       target="_blank" 
+       class="whatsapp-link" 
+       style="background: #172a46; border: none;">
+      <span>📲</span> +57 349 3424583
+    </a>
   </div>
 
-  <!-- NOTA FINAL: todos los textos del prompt están incluidos -->
-  <p style="text-align: right; font-size: 0.85rem; margin-top: 1rem; color: #7b8ba3;">DevSolutions · tecnología que impulsa tu negocio</p>
+  <!-- NOTA FINAL: se hace referencia a logo.jpeg; si tienes el archivo, descomentar en header -->
+  <p style="text-align: right; font-size: 0.8rem; margin-top: 1rem; color: #7b8ba3;">Tecnología que impulsa tu negocio · reemplaza el cuadro AY por logo.jpeg si lo deseas</p>
 
 </div>
 </body>
