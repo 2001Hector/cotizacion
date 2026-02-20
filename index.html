@@ -35,7 +35,7 @@
     .header-empresa {
       display: flex;
       align-items: center;
-      justify-content: center; /* Centra todo horizontalmente */
+      justify-content: center;
       gap: 1.5rem;
       margin-bottom: 2rem;
       flex-wrap: wrap;
@@ -45,7 +45,6 @@
       border: 1px solid #d6e3f5;
     }
 
-    /* Estilo para la imagen del logo - MÁS GRANDE */
     .logo-img {
       width: 120px;
       height: 120px;
@@ -154,6 +153,8 @@
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
       border: 1px solid #e9eef3;
       transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
@@ -223,6 +224,35 @@
       margin-top: 0.8rem;
     }
 
+    /* === NUEVO ESTILO PARA BOTÓN WHATSAPP EN TARJETAS === */
+    .whatsapp-card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: #25D366;
+      color: white;
+      font-weight: 600;
+      padding: 0.7rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border: 1px solid #128C7E;
+      transition: 0.15s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+      width: fit-content;
+    }
+
+    .whatsapp-card-btn:hover {
+      background: #20b859;
+      transform: scale(1.02);
+    }
+
+    .whatsapp-card-btn i {
+      font-size: 1.2rem;
+    }
+
     /* === SECCIONES DE TEXTO LARGO (PAGO, MANTENIMIENTO) === */
     .info-block {
       background: #f1f6fd;
@@ -278,7 +308,7 @@
       margin: 2.2rem 0 1rem;
     }
 
-    /* === BOTÓN / ENLACE WHATSAPP (COLOMBIA) === */
+    /* === BOTÓN / ENLACE WHATSAPP PRINCIPAL (COLOMBIA) === */
     .whatsapp-link {
       display: inline-flex;
       align-items: center;
@@ -328,7 +358,6 @@
       h1 { font-size: 1.9rem; }
       .hero p { max-width: 100%; }
       
-      /* Centrar todo en el header en móviles */
       .header-empresa { 
         flex-direction: column; 
         align-items: center; 
@@ -338,7 +367,7 @@
       }
       
       .logo-img {
-        width: 150px;  /* Aún más grande en móvil */
+        width: 150px;
         height: 150px;
       }
       
@@ -371,7 +400,7 @@
     <p style="margin-top: 1rem;">Creamos desde páginas informativas hasta sistemas empresariales completos con almacenamiento de datos, inventarios, panel administrativo y aplicaciones móviles.</p>
   </div>
 
-  <!-- SERVICIOS EN TARJETAS -->
+  <!-- SERVICIOS EN TARJETAS (SOLO 3 TARJETAS) -->
   <h2>⚙️ Nuestros servicios</h2>
   <div class="servicios-grid">
     
@@ -389,6 +418,11 @@
       </ul>
       <div class="precio-badge">💰 Inversión mínima: $800.000 COP</div>
       <div class="nota-precio">* Solo muestra información, no almacena datos ni tiene panel.</div>
+      <a href="https://wa.me/573493424583?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20P%C3%A1gina%20Web%20Est%C3%A1tica%20(Informativa)%20con%20inversi%C3%B3n%20de%20%24800.000%20COP" 
+         target="_blank" 
+         class="whatsapp-card-btn">
+        <span>📲</span> Consultar por WhatsApp
+      </a>
     </div>
 
     <!-- SOFTWARE WEB CON BD -->
@@ -405,6 +439,11 @@
       </ul>
       <div class="precio-badge">💰 Desde $1.500.000 COP hasta +$2.000.000 COP</div>
       <div class="nota-precio">Precio final según complejidad, módulos e integraciones.</div>
+      <a href="https://wa.me/573493424583?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Software%20Web%20con%20Base%20de%20Datos%20(desde%20%241.500.000%20COP)" 
+         target="_blank" 
+         class="whatsapp-card-btn">
+        <span>📲</span> Consultar por WhatsApp
+      </a>
     </div>
 
     <!-- APLICACIONES MÓVILES -->
@@ -419,20 +458,11 @@
       </ul>
       <div class="precio-badge">📲 Valor según funcionalidades</div>
       <p style="margin-top: 0.8rem;">Consulta tu proyecto sin compromiso.</p>
-    </div>
-
-    <!-- OPTIMIZACIÓN Y MEJORA -->
-    <div class="card">
-      <div class="emoji-tag">🚀</div>
-      <h4>Optimización y Mejora</h4>
-      <p>Si ya cuentas con web o software, modernizamos y optimizamos.</p>
-      <ul>
-        <li>Más velocidad y eficiencia</li>
-        <li>Mejora de diseño (UX/UI)</li>
-        <li>Automatización de procesos</li>
-        <li>Actualización tecnológica</li>
-      </ul>
-      <div class="nota-precio">Presupuesto personalizado · haz tu sistema más seguro y moderno.</div>
+      <a href="https://wa.me/573493424583?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Desarrollo%20de%20Aplicaciones%20M%C3%B3viles" 
+         target="_blank" 
+         class="whatsapp-card-btn">
+        <span>📲</span> Consultar por WhatsApp
+      </a>
     </div>
   </div>
 
