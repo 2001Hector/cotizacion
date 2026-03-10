@@ -31,7 +31,75 @@
       padding: 2.5rem 2rem;
     }
 
-    /* === HEADER CON LOGO Y NOMBRE === */
+    /* === NUEVA PORTADA PROFESIONAL (ocupa ancho completo sin romper) === */
+    .portada-wrapper {
+      margin: -2.5rem -2rem 2rem -2rem; /* se expande sobre el padding del contenedor */
+    }
+    .portada {
+      position: relative;
+      width: 100%;
+      height: 380px; /* alto moderado, tipo cover profesional */
+      background-image: url('gu.jpeg');
+      background-size: cover;
+      background-position: center 30%; /* enfoca la parte de ingenieros */
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    /* Capa oscura profesional con gradiente para realzar texto y darle identidad de marca */
+    .portada::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(95deg, rgba(10, 30, 60, 0.75) 0%, rgba(25, 55, 100, 0.55) 70%, rgba(45, 90, 140, 0.3) 100%);
+      z-index: 1;
+    }
+    .portada-contenido {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 1rem 2rem;
+    }
+    .portada-contenido h1 {
+      font-size: 3.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: white;
+      text-shadow: 0 4px 25px rgba(0,15,40,0.7);
+      -webkit-text-fill-color: white; /* anula gradientes anteriores */
+      background: none;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .portada-contenido .portada-lema {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.95);
+      background: rgba(20,45,90,0.3);
+      backdrop-filter: blur(3px);
+      display: inline-block;
+      padding: 0.4rem 2rem;
+      border-radius: 60px;
+      border: 1px solid rgba(255,255,255,0.25);
+      font-weight: 400;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    /* Ajuste para pantallas pequeñas: la portada se adapta */
+    @media (max-width: 700px) {
+      .portada { height: 300px; }
+      .portada-contenido h1 { font-size: 2.3rem; }
+      .portada-contenido .portada-lema { font-size: 1.2rem; }
+    }
+    @media (max-width: 500px) {
+      .portada { height: 260px; }
+    }
+
+    /* === HEADER CON LOGO Y NOMBRE (ahora debajo de la portada) === */
     .header-empresa {
       display: flex;
       align-items: center;
@@ -375,18 +443,31 @@
         margin-left: 0; 
         width: 100%;
       }
+      /* ajuste portada responsive ya definido */
     }
   </style>
 </head>
 <body>
 <div class="contenedor">
+
+  <!-- ========= NUEVA PORTADA PROFESIONAL ========= -->
+  <!-- Se expande a lo ancho usando margen negativo, no daña nada -->
+  <div class="portada-wrapper">
+    <div class="portada">
+      <div class="portada-contenido">
+        <h1>Equipo de ingenieros AYOTI</h1>
+        <div class="portada-lema">innovación · precisión · desarrollo a medida</div>
+      </div>
+    </div>
+  </div>
   
-  <!-- HEADER CON LOGO GRANDE Y CENTRADO -->
+  <!-- HEADER CON LOGO GRANDE Y CENTRADO (justo debajo de la portada) -->
   <div class="header-empresa">
     <img 
       src="logo.jpeg" 
       alt="AYOTI logo" 
       class="logo-img"
+      onerror="this.style.display='none';" <!-- por si falta logo.jpeg no rompe -->
     >
     <span class="nombre-empresa">AYOTI</span>
     <span class="eslogan-header">Automatización y Optimización Tecnológica Integral</span>
@@ -416,7 +497,7 @@
         <li>Optimización básica de velocidad</li>
         <li>Publicación en internet</li>
       </ul>
-      <div class="precio-badge">💰 Inversión estimada entre $500.000 y +$800.000 COP</div>
+      <div class="precio-badge"></div>
       <div class="nota-precio">* informativo .</div>
       <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20P%C3%A1gina%20Web%20Est%C3%A1tica%20(Informativa)%20con%20inversi%C3%B3n%20de%20%24800.000%20COP" 
          target="_blank" 
@@ -470,12 +551,10 @@
   <h2>💳 Modalidad de Pago Flexible</h2>
   <div class="info-block">
     <p>Ofrecemos opción de pago por cuotas para facilitar la adquisición del software.</p>
-    <div class="cuota-ejemplo">
-      <p>✨ <strong>Ejemplo:</strong> Si adquieres un software con valor de <span>$1.500.000 COP</span>, puedes pagar una suscripción mensual de <span>$90.000 COP</span> hasta completar el valor total del desarrollo.</p>
-    </div>
+  
     <div class="highlight">
-      <p>✅ Una vez cancelado el valor total del software, el pago mensual se reduce a un valor de mantenimiento que oscila entre:</p>
-      <p class="rango-mant">💰 $40.000 y $50.000 COP mensuales</p>
+      <p>✅ Pago mensual o de contao  </p>
+      <p class="rango-mant"></p>
       <p style="margin-top: 0.8rem;"><strong>El valor de mantenimiento depende de:</strong> nivel de soporte, actualizaciones, hosting/almacenamiento y complejidad del sistema.</p>
     </div>
   </div>
@@ -490,8 +569,8 @@
   <!-- EXTRAS: badges de inversión -->
   <hr>
   <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
-    <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">🌐 Pág. estática: $800.000</span></div>
-    <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">🖥️ Software web: desde $1.500.000</span></div>
+    <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">🌐 Pág. estática</span></div>
+    <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">🖥️ Software web</span></div>
     <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">📱 Apps: cotizar</span></div>
   </div>
 
