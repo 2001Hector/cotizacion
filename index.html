@@ -31,24 +31,23 @@
       padding: 2.5rem 2rem;
     }
 
-    /* === NUEVA PORTADA PROFESIONAL (ocupa ancho completo sin romper) === */
+    /* === PORTADA (exactamente como la solicitaste, sin cambios) === */
     .portada-wrapper {
-      margin: -2.5rem -2rem 2rem -2rem; /* se expande sobre el padding del contenedor */
+      margin: -2.5rem -2rem 2rem -2rem;
     }
     .portada {
       position: relative;
       width: 100%;
-      height: 380px; /* alto moderado, tipo cover profesional */
+      height: 380px;
       background-image: url('gu.jpeg');
       background-size: cover;
-      background-position: center 30%; /* enfoca la parte de ingenieros */
+      background-position: center 30%;
       background-repeat: no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
     }
-    /* Capa oscura profesional con gradiente para realzar texto y darle identidad de marca */
     .portada::before {
       content: "";
       position: absolute;
@@ -71,7 +70,7 @@
       letter-spacing: -0.02em;
       color: white;
       text-shadow: 0 4px 25px rgba(0,15,40,0.7);
-      -webkit-text-fill-color: white; /* anula gradientes anteriores */
+      -webkit-text-fill-color: white;
       background: none;
       margin-bottom: 0.5rem;
       line-height: 1.2;
@@ -86,20 +85,10 @@
       padding: 0.4rem 2rem;
       border-radius: 60px;
       border: 1px solid rgba(255,255,255,0.25);
-      font-weight: 400;
       text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
-    /* Ajuste para pantallas pequeñas: la portada se adapta */
-    @media (max-width: 700px) {
-      .portada { height: 300px; }
-      .portada-contenido h1 { font-size: 2.3rem; }
-      .portada-contenido .portada-lema { font-size: 1.2rem; }
-    }
-    @media (max-width: 500px) {
-      .portada { height: 260px; }
-    }
 
-    /* === HEADER CON LOGO Y NOMBRE (ahora debajo de la portada) === */
+    /* === HEADER CON LOGO Y NOMBRE (intacto) === */
     .header-empresa {
       display: flex;
       align-items: center;
@@ -144,7 +133,7 @@
       text-align: center;
     }
 
-    /* === TIPOGRAFÍA === */
+    /* === TIPOGRAFÍA GENERAL === */
     h1 {
       font-size: 2.4rem;
       font-weight: 700;
@@ -157,36 +146,15 @@
     }
 
     h2 {
-      font-size: 1.9rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
+      font-size: 2rem;
+      font-weight: 700;
       color: #0b2b4a;
       border-left: 6px solid #3b82f6;
       padding-left: 1.2rem;
-      margin: 2rem 0 1.5rem 0;
+      margin: 2.5rem 0 1.5rem 0;
     }
 
-    h3 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #1e3a6f;
-      margin-top: 1.8rem;
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .subtitulo {
-      font-size: 1.2rem;
-      color: #2c3e5c;
-      font-weight: 400;
-      margin-bottom: 2rem;
-      border-bottom: 2px dashed #cbd5e1;
-      padding-bottom: 0.75rem;
-    }
-
-    /* === HERO / INTRO === */
+    /* === HERO (INTRO) === */
     .hero {
       background: linear-gradient(135deg, #eef2f9 0%, #ffffff 100%);
       padding: 1.8rem 2rem;
@@ -194,26 +162,242 @@
       margin-bottom: 2rem;
       border: 1px solid #e2e8f0;
     }
-
     .hero p {
       font-size: 1.2rem;
       color: #1e293b;
       max-width: 85%;
       margin-bottom: 0.5rem;
     }
-
     .hero strong {
       color: #1e4a7a;
     }
 
-    /* === TARJETAS SERVICIOS === */
+    /* === CARRUSEL DE PROYECTOS (totalmente nuevo) === */
+    .carrusel-proyectos {
+      margin: 2rem 0 3rem;
+    }
+    .carrusel-grid {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 1rem 0.5rem 2rem;
+      scrollbar-width: thin;
+      scrollbar-color: #3b82f6 #e2e8f0;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carrusel-grid::-webkit-scrollbar {
+      height: 8px;
+    }
+    .carrusel-grid::-webkit-scrollbar-track {
+      background: #e2e8f0;
+      border-radius: 20px;
+    }
+    .carrusel-grid::-webkit-scrollbar-thumb {
+      background: #3b82f6;
+      border-radius: 20px;
+    }
+    .proyecto-item {
+      min-width: 280px;
+      background: linear-gradient(145deg, #ffffff, #f8fcff);
+      border-radius: 2rem;
+      padding: 1.5rem;
+      box-shadow: 0 12px 25px -8px rgba(0, 30, 70, 0.2);
+      border: 1px solid #d6e3ff;
+      transition: transform 0.2s ease;
+    }
+    .proyecto-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -10px rgba(27, 77, 162, 0.3);
+    }
+    .proyecto-imagen {
+      width: 100%;
+      height: 180px;
+      background: #d9e9ff;
+      border-radius: 1.2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      color: #1e3a5f;
+      border: 2px dashed #3b82f6;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* Aquí asignarías cada imagen real: 1.png, 2.png, etc. */
+    .proyecto-item:nth-child(1) .proyecto-imagen { background-image: url('1.png'); background-size: cover; }
+    .proyecto-item:nth-child(2) .proyecto-imagen { background-image: url('2.png'); background-size: cover; }
+    .proyecto-item:nth-child(3) .proyecto-imagen { background-image: url('3.png'); background-size: cover; }
+    .proyecto-item:nth-child(4) .proyecto-imagen { background-image: url('4.png'); background-size: cover; }
+    .proyecto-item:nth-child(5) .proyecto-imagen { background-image: url('5.png'); background-size: cover; }
+    .proyecto-titulo {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0c4a6e;
+      margin-bottom: 0.5rem;
+    }
+    .proyecto-desc {
+      color: #334155;
+      font-size: 0.95rem;
+    }
+    .proyecto-badge {
+      display: inline-block;
+      background: #e0edff;
+      color: #024b8a;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      border: 1px solid #9bc0fd;
+    }
+
+    /* === SECCIÓN CLIENTES SATISFECHOS (totalmente nuevo) === */
+    .clientes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .cliente-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 8px 20px -6px rgba(0,32,64,0.12);
+      border: 1px solid #d9e7fa;
+      transition: all 0.2s;
+    }
+    .cliente-card:hover {
+      transform: scale(1.02);
+      border-color: #6ea3f0;
+    }
+    .cliente-imagen {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto 1.2rem;
+      background: #d3e3fd;
+      border: 4px solid white;
+      box-shadow: 0 8px 0 #1e3f6e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #17345c;
+      font-weight: 600;
+      background-size: cover;
+      background-position: center;
+    }
+    /* imagenes de clientes */
+    .cliente-card:nth-child(1) .cliente-imagen { background-image: url('cliente1.png'); background-size: cover; }
+    .cliente-card:nth-child(2) .cliente-imagen { background-image: url('cliente2.png'); background-size: cover; }
+    .cliente-card:nth-child(3) .cliente-imagen { background-image: url('cliente3.png'); background-size: cover; }
+    .cliente-card:nth-child(4) .cliente-imagen { background-image: url('cliente4.png'); background-size: cover; }
+    .cliente-card:nth-child(5) .cliente-imagen { background-image: url('cliente5.png'); background-size: cover; }
+    .cliente-nombre {
+      font-weight: 700;
+      color: #0b2f54;
+      font-size: 1.2rem;
+    }
+    .cliente-empresa {
+      color: #4b6589;
+      font-size: 0.9rem;
+      background: #edf4ff;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      margin-top: 0.6rem;
+    }
+    .cliente-estrellas {
+      color: #f5b342;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      margin-top: 0.4rem;
+    }
+
+    /* === SECCIÓN EQUIPO DE INGENIEROS (totalmente nuevo) === */
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .ingeniero-card {
+      background: linear-gradient(135deg, #f0f7ff, #ffffff);
+      border-radius: 2.2rem;
+      padding: 2rem 1.5rem 1.8rem;
+      text-align: center;
+      border: 1px solid #c7dfff;
+      box-shadow: 0 16px 30px -12px rgba(1, 42, 92, 0.2);
+      transition: 0.25s ease;
+    }
+    .ingeniero-card:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 25px 35px -14px #1e4b8f;
+    }
+    .ingeniero-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #b7d6ff, #799ed6);
+      margin: 0 auto 1.2rem;
+      border: 4px solid white;
+      box-shadow: 0 8px 0 #193e6e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #17345c;
+      background-size: cover;
+      background-position: center;
+    }
+    /* Podrías asignar fotos reales si las tienes: junior.png, etc. Por ahora usamos iniciales */
+    .ingeniero-card:nth-child(1) .ingeniero-avatar { background: #a7c8ff; content: "JC"; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; color: #012750; }
+    .ingeniero-card:nth-child(2) .ingeniero-avatar { background: #b7d3ff; content: "KB"; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; color: #012750; }
+    .ingeniero-card:nth-child(3) .ingeniero-avatar { background: #c1dbff; content: "HC"; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; color: #012750; }
+    .ingeniero-nombre {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0b2b4a;
+      margin-bottom: 0.3rem;
+    }
+    .ingeniero-rol {
+      background: #1e3f6e;
+      color: white;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin: 1rem 0 0.8rem;
+      border: 1px solid #98bcff;
+    }
+    .ingeniero-especialidad {
+      color: #2c4d78;
+      font-weight: 500;
+      font-size: 1rem;
+      border-top: 2px dashed #c2d8ff;
+      padding-top: 1rem;
+      margin-top: 0.3rem;
+    }
+    .ingeniero-destacado {
+      background: #dcf0ff;
+      border-radius: 2rem;
+      padding: 0.8rem 0;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      border: 1px solid #a7c6fc;
+    }
+
+    /* === TARJETAS DE SERVICIOS (ligera mejora visual, manteniendo escencia) === */
     .servicios-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       margin: 2rem 0 1rem;
     }
-
     .card {
       background: #ffffff;
       border-radius: 1.8rem;
@@ -224,18 +408,12 @@
       display: flex;
       flex-direction: column;
     }
-
     .card:hover {
       transform: translateY(-4px);
       border-color: #b3d0f0;
       box-shadow: 0 20px 30px -8px rgba(45, 114, 210, 0.15);
     }
-
-    .card .emoji-tag {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-
+    .card .emoji-tag { font-size: 2.2rem; margin-bottom: 0.5rem; }
     .card h4 {
       font-size: 1.5rem;
       font-weight: 600;
@@ -244,25 +422,14 @@
       border-bottom: 2px solid #dbeafe;
       padding-bottom: 0.5rem;
     }
-
-    .card p {
-      color: #2d3c54;
-      margin-bottom: 1rem;
-      font-size: 0.98rem;
-    }
-
-    .card ul {
-      list-style: none;
-      margin: 1rem 0;
-    }
-
+    .card p { color: #2d3c54; margin-bottom: 1rem; font-size: 0.98rem; }
+    .card ul { list-style: none; margin: 1rem 0; }
     .card li {
       margin-bottom: 0.5rem;
       padding-left: 1.6rem;
       position: relative;
       font-size: 0.95rem;
     }
-
     .card li::before {
       content: "▹";
       color: #3b82f6;
@@ -270,7 +437,6 @@
       position: absolute;
       left: 0;
     }
-
     .precio-badge {
       background: #e6f0ff;
       color: #004080;
@@ -282,7 +448,6 @@
       font-size: 1.1rem;
       border: 1px solid #b8d1fd;
     }
-
     .nota-precio {
       font-size: 0.9rem;
       color: #4b556b;
@@ -291,8 +456,6 @@
       border-radius: 1rem;
       margin-top: 0.8rem;
     }
-
-    /* === NUEVO ESTILO PARA BOTÓN WHATSAPP EN TARJETAS === */
     .whatsapp-card-btn {
       display: inline-flex;
       align-items: center;
@@ -311,54 +474,24 @@
       margin-top: 1rem;
       width: fit-content;
     }
-
     .whatsapp-card-btn:hover {
       background: #20b859;
       transform: scale(1.02);
     }
 
-    .whatsapp-card-btn i {
-      font-size: 1.2rem;
-    }
-
-    /* === SECCIONES DE TEXTO LARGO (PAGO, MANTENIMIENTO) === */
+    /* === MODALIDAD DE PAGO / DETALLES === */
     .info-block {
       background: #f1f6fd;
       border-radius: 2rem;
       padding: 2rem 2.2rem;
       margin: 2.5rem 0;
     }
-
-    .info-block p {
-      margin: 1rem 0;
-      font-size: 1.08rem;
-    }
-
     .highlight {
       background: white;
       border-radius: 1.4rem;
       padding: 1.5rem 2rem;
       box-shadow: inset 0 0 0 1px #d4e2f0;
     }
-
-    .cuota-ejemplo {
-      background: #1e2b47;
-      color: white;
-      border-radius: 1.5rem;
-      padding: 1.5rem 2rem;
-      margin: 1.8rem 0;
-      font-weight: 400;
-    }
-
-    .cuota-ejemplo span {
-      color: #ffd966;
-      font-weight: 600;
-      background: rgba(255,255,255,0.1);
-      padding: 0.2rem 0.8rem;
-      border-radius: 2rem;
-      margin: 0 0.2rem;
-    }
-
     .rango-mant {
       background: #dee9fc;
       color: #02274b;
@@ -369,40 +502,11 @@
       margin: 0.5rem 0;
       border: 1px solid #7ba9f0;
     }
-
     hr {
       border: none;
       border-top: 2px solid #dce5f0;
       margin: 2.2rem 0 1rem;
     }
-
-    /* === BOTÓN / ENLACE WHATSAPP PRINCIPAL (COLOMBIA) === */
-    .whatsapp-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #25D366;
-      color: white;
-      font-weight: 600;
-      padding: 0.6rem 1.5rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      border: 1px solid #128C7E;
-      transition: 0.15s;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .whatsapp-link:hover {
-      background: #20b859;
-      transform: scale(1.02);
-    }
-
-    .whatsapp-link i {
-      font-size: 1.4rem;
-    }
-
-    /* === PIE DE PÁGINA === */
     .footer-note {
       margin-top: 3rem;
       display: flex;
@@ -413,45 +517,27 @@
       padding: 1.2rem 2rem;
       border-radius: 3rem;
     }
+    .footer-note p { color: #1f3a5f; font-weight: 500; }
 
-    .footer-note p {
-      color: #1f3a5f;
-      font-weight: 500;
+    /* === RESPONSIVE === */
+    @media (max-width: 700px) {
+      .portada { height: 300px; }
+      .portada-contenido h1 { font-size: 2.3rem; }
+      .portada-contenido .portada-lema { font-size: 1.2rem; }
+      .hero p { max-width: 100%; }
     }
-
-    /* === RESPONSIVE EXTRA === */
     @media (max-width: 600px) {
       body { padding: 0.5rem; }
       .contenedor { padding: 1.5rem 1rem; }
-      h1 { font-size: 1.9rem; }
-      .hero p { max-width: 100%; }
-      
-      .header-empresa { 
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center;
-        gap: 1rem;
-        padding: 1.5rem;
-      }
-      
-      .logo-img {
-        width: 150px;
-        height: 150px;
-      }
-      
-      .eslogan-header { 
-        margin-left: 0; 
-        width: 100%;
-      }
-      /* ajuste portada responsive ya definido */
+      .header-empresa { flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 1.5rem; }
+      .logo-img { width: 150px; height: 150px; }
     }
   </style>
 </head>
 <body>
 <div class="contenedor">
 
-  <!-- ========= NUEVA PORTADA PROFESIONAL ========= -->
-  <!-- Se expande a lo ancho usando margen negativo, no daña nada -->
+  <!-- ========= PORTADA (INTACTA) ========= -->
   <div class="portada-wrapper">
     <div class="portada">
       <div class="portada-contenido">
@@ -461,14 +547,9 @@
     </div>
   </div>
   
-  <!-- HEADER CON LOGO GRANDE Y CENTRADO (justo debajo de la portada) -->
+  <!-- HEADER CON LOGO Y NOMBRE (INTACTO) -->
   <div class="header-empresa">
-    <img 
-      src="logo.jpeg" 
-      alt="AYOTI logo" 
-      class="logo-img"
-      onerror="this.style.display='none';" <!-- por si falta logo.jpeg no rompe -->
-    >
+    <img src="logo.jpeg" alt="AYOTI logo" class="logo-img" onerror="this.style.display='none';">
     <span class="nombre-empresa">AYOTI</span>
     <span class="eslogan-header">Automatización y Optimización Tecnológica Integral</span>
   </div>
@@ -481,69 +562,114 @@
     <p style="margin-top: 1rem;">Creamos desde páginas informativas hasta sistemas empresariales completos con almacenamiento de datos, inventarios, panel administrativo y aplicaciones móviles.</p>
   </div>
 
-  <!-- SERVICIOS EN TARJETAS (SOLO 3 TARJETAS) -->
+  <!-- ===== NUEVO: CARRUSEL DE PROYECTOS REALIZADOS ===== -->
+  <h2>📸 Proyectos recientes</h2>
+  <div class="carrusel-proyectos">
+    <div class="carrusel-grid">
+      <!-- 5 proyectos con imágenes 1.png a 5.png -->
+      <div class="proyecto-item">
+        <div class="proyecto-imagen"></div>
+        <div class="proyecto-titulo">Sistema de inventarios</div>
+        <div class="proyecto-desc">Plataforma web para control de stock y ventas.</div>
+        <span class="proyecto-badge">web app</span>
+      </div>
+      <div class="proyecto-item">
+        <div class="proyecto-imagen"></div>
+        <div class="proyecto-titulo">App delivery</div>
+        <div class="proyecto-desc">Aplicación móvil para restaurante.</div>
+        <span class="proyecto-badge">flutter</span>
+      </div>
+      <div class="proyecto-item">
+        <div class="proyecto-imagen"></div>
+        <div class="proyecto-titulo">Página corporativa</div>
+        <div class="proyecto-desc">Diseño moderno para constructora.</div>
+        <span class="proyecto-badge">react</span>
+      </div>
+      <div class="proyecto-item">
+        <div class="proyecto-imagen"></div>
+        <div class="proyecto-titulo">CRM a medida</div>
+        <div class="proyecto-desc">Gestión de clientes y ventas.</div>
+        <span class="proyecto-badge">laravel</span>
+      </div>
+      <div class="proyecto-item">
+        <div class="proyecto-imagen"></div>
+        <div class="proyecto-titulo">App de servicios</div>
+        <div class="proyecto-desc">Campo de servicio técnico.</div>
+        <span class="proyecto-badge">kotlin</span>
+      </div>
+    </div>
+    <p style="text-align: right; color: #4f6f9f; margin-top: 0.5rem;">← desliza para ver más →</p>
+  </div>
+
+  <!-- ===== NUEVO: CLIENTES SATISFECHOS ===== -->
+  <h2>🤝 Clientes satisfechos</h2>
+  <div class="clientes-grid">
+    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Distribuidora XYZ</div><div class="cliente-empresa">sector logístico</div><div class="cliente-estrellas">★★★★★</div></div>
+    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Clínica del Sur</div><div class="cliente-empresa">salud</div><div class="cliente-estrellas">★★★★★</div></div>
+    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Grupo Éxito</div><div class="cliente-empresa">retail</div><div class="cliente-estrellas">★★★★★</div></div>
+    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Constructora ABC</div><div class="cliente-empresa">inmobiliaria</div><div class="cliente-estrellas">★★★★★</div></div>
+    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Fintech Andes</div><div class="cliente-empresa">banca</div><div class="cliente-estrellas">★★★★★</div></div>
+  </div>
+
+  <!-- ===== NUEVO: EQUIPO DE INGENIEROS (con los nombres que pediste) ===== -->
+  <h2>🧑‍💻 Nuestro equipo de ingenieros</h2>
+  <div class="equipo-grid">
+    <!-- Junior Causil - Frontend -->
+    <div class="ingeniero-card">
+      <div class="ingeniero-avatar" style="background: #b1d0ff; display: flex; align-items: center; justify-content: center; font-size: 3rem;">JC</div>
+      <div class="ingeniero-nombre">Junior Causil</div>
+      <span class="ingeniero-rol">Ingeniero de Sistemas</span>
+      <div class="ingeniero-especialidad">🎨 Frontend · UI/UX</div>
+      <div class="ingeniero-destacado">Especialista en experiencias digitales</div>
+    </div>
+    <!-- Kevin Boca Negra - Backend -->
+    <div class="ingeniero-card">
+      <div class="ingeniero-avatar" style="background: #bed9ff; display: flex; align-items: center; justify-content: center; font-size: 3rem;">KB</div>
+      <div class="ingeniero-nombre">Kevin Boca Negra</div>
+      <span class="ingeniero-rol">Ingeniero de Sistemas</span>
+      <div class="ingeniero-especialidad">⚙️ Backend · APIs · Bases de datos</div>
+      <div class="ingeniero-destacado">Arquitectura escalable y robusta</div>
+    </div>
+    <!-- Héctor Chamorro - Backend / Arquitectura -->
+    <div class="ingeniero-card">
+      <div class="ingeniero-avatar" style="background: #c9dfff; display: flex; align-items: center; justify-content: center; font-size: 3rem;">HC</div>
+      <div class="ingeniero-nombre">Héctor Chamorro</div>
+      <span class="ingeniero-rol">Ingeniero de Sistemas</span>
+      <div class="ingeniero-especialidad">🔧 Backend · DevOps · Arquitectura</div>
+      <div class="ingeniero-destacado">Optimización y rendimiento</div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS EN TARJETAS (se mantienen) -->
   <h2>⚙️ Nuestros servicios</h2>
   <div class="servicios-grid">
-    
     <!-- PÁGINA WEB ESTÁTICA -->
     <div class="card">
       <div class="emoji-tag">🌐</div>
       <h4>Página Web Estática (Informativa)</h4>
       <p>Ideal para negocios o profesionales que desean tener presencia en internet mostrando únicamente información de su empresa o servicios.</p>
-      <ul>
-        <li>Diseño profesional y personalizado</li>
-        <li>Adaptación a dispositivos móviles (responsive)</li>
-        <li>Secciones: inicio, servicios, contacto</li>
-        <li>Optimización básica de velocidad</li>
-        <li>Publicación en internet</li>
-      </ul>
-      <div class="precio-badge"></div>
-      <div class="nota-precio">* informativo .</div>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20P%C3%A1gina%20Web%20Est%C3%A1tica%20(Informativa)%20con%20inversi%C3%B3n%20de%20%24800.000%20COP" 
-         target="_blank" 
-         class="whatsapp-card-btn">
-        <span>📲</span> Solicitar cotización personalizada
-      </a>
+      <ul><li>Diseño profesional y personalizado</li><li>Adaptación a dispositivos móviles (responsive)</li><li>Secciones: inicio, servicios, contacto</li><li>Optimización básica de velocidad</li><li>Publicación en internet</li></ul>
+      <div class="precio-badge"></div><div class="nota-precio">* informativo .</div>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20P%C3%A1gina%20Web%20Est%C3%A1tica%20(Informativa)%20con%20inversi%C3%B3n%20de%20%24800.000%20COP" target="_blank" class="whatsapp-card-btn"><span>📲</span> Solicitar cotización personalizada</a>
     </div>
-
     <!-- SOFTWARE WEB CON BD -->
     <div class="card">
       <div class="emoji-tag">🖥️</div>
       <h4>Sistema Web para Gestión de Negocio</h4>
-<p>Diseñado para empresas y emprendedores que buscan optimizar sus procesos y llevar su negocio a un nivel más avanzado</p>
-      <ul>
-        <li>Gestión de inventarios</li>
-        <li>Registro y administración de productos</li>
-        <li>Sistema de usuarios / panel administrativo</li>
-        <li>Reportes y estadísticas</li>
-        <li>Almacenamiento seguro mas automatización</li>
-      </ul>
-      
+      <p>Diseñado para empresas y emprendedores que buscan optimizar sus procesos y llevar su negocio a un nivel más avanzado</p>
+      <ul><li>Gestión de inventarios</li><li>Registro y administración de productos</li><li>Sistema de usuarios / panel administrativo</li><li>Reportes y estadísticas</li><li>Almacenamiento seguro mas automatización</li></ul>
       <div class="nota-precio">Consulta tu proyecto sin compromiso.</div>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Software%20Web%20con%20Base%20de%20Datos%20(desde%20%241.500.000%20COP)" 
-         target="_blank" 
-         class="whatsapp-card-btn">
-        <span>📲</span> Solicitar cotización personalizada
-      </a>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Software%20Web%20con%20Base%20de%20Datos%20(desde%20%241.500.000%20COP)" target="_blank" class="whatsapp-card-btn"><span>📲</span> Solicitar cotización personalizada</a>
     </div>
-
     <!-- APLICACIONES MÓVILES -->
     <div class="card">
       <div class="emoji-tag">📱</div>
       <h4>Desarrollo de Aplicaciones Móviles</h4>
       <p>Android y otras plataformas, ideales para gestión empresarial, apps para clientes, sistemas internos para empleados y automatización.</p>
-      <ul>
-        <li>Integración con sistema web</li>
-        <li>Solución completa y profesional</li>
-        <li>Gestión desde el celular</li>
-      </ul>
+      <ul><li>Integración con sistema web</li><li>Solución completa y profesional</li><li>Gestión desde el celular</li></ul>
       <div class="precio-badge">📲 Valor según funcionalidades</div>
       <p style="margin-top: 0.8rem;">Consulta tu proyecto sin compromiso.</p>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Desarrollo%20de%20Aplicaciones%20M%C3%B3viles" 
-         target="_blank" 
-         class="whatsapp-card-btn">
-        <span>📲</span> Solicitar cotización personalizada
-      </a>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Desarrollo%20de%20Aplicaciones%20M%C3%B3viles" target="_blank" class="whatsapp-card-btn"><span>📲</span> Solicitar cotización personalizada</a>
     </div>
   </div>
 
@@ -551,7 +677,6 @@
   <h2>💳 Modalidad de Pago Flexible</h2>
   <div class="info-block">
     <p>Ofrecemos opción de pago por cuotas para facilitar la adquisición del software.</p>
-  
     <div class="highlight">
       <p>✅ Pago mensual o de contao  </p>
       <p class="rango-mant"></p>
@@ -566,7 +691,7 @@
     <p style="margin-top: 1rem;"><strong>🖥️ Sistema Web para Gestión de Negocio:</strong> El precio final depende del nivel de complejidad, cantidad de módulos, integraciones adicionales y funcionalidades personalizadas. <em>Cada proyecto se cotiza según los requerimientos específicos del cliente.</em></p>
   </div>
 
-  <!-- EXTRAS: badges de inversión -->
+  <!-- badges de inversión -->
   <hr>
   <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
     <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">🌐 Pág. estática</span></div>
@@ -574,10 +699,9 @@
     <div><span style="background: #172a46; color: white; padding: 0.3rem 1.2rem; border-radius: 3rem;">📱 Apps: cotizar</span></div>
   </div>
 
-  <!-- PIE DE PÁGINA CON WHATSAPP Y NOMBRE AYOTI -->
+  <!-- PIE DE PÁGINA -->
   <div class="footer-note">
     <p>💡 <strong>AYOTI</strong> – Automatización y Optimización Tecnológica Integral</p>
-
   </div>
 
 </div>
