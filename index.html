@@ -67,10 +67,14 @@
     .portada-contenido h1 {
       font-size: 2.4rem;
       font-weight: 700;
-      color: white;
+      color: white !important; /* FORZADO A BLANCO */
       text-shadow: 0 4px 20px rgba(0,0,0,0.4);
       margin-bottom: 0.3rem;
       line-height: 1.2;
+      background: none; /* QUITAR CUALQUIER FONDO */
+      -webkit-text-fill-color: white; /* PARA NAVEGADORES WEBKIT */
+      -webkit-background-clip: unset;
+      background-clip: unset;
     }
     .portada-contenido .portada-lema {
       font-size: 1.3rem;
@@ -402,7 +406,7 @@
       background-image: url('kevin.png'); 
     }
     .ingeniero-card:nth-child(3) .ingeniero-foto { 
-      background-image: url('hector.png'); 
+      background-image: url('hector.jpeg'); 
     }
     .ingeniero-nombre {
       font-size: 2rem;
@@ -555,7 +559,7 @@
 <body>
 <div class="contenedor">
 
-  <!-- PORTADA - TÍTULO EN BLANCO CON EFECTO ELEGANTE -->
+  <!-- PORTADA - TÍTULO EN BLANCO CORREGIDO -->
   <div class="portada-wrapper">
     <div class="portada">
       <div class="portada-contenido">
@@ -718,7 +722,7 @@
     </div>
   </div>
 
-  <!-- REDES SOCIALES - TEXTO ACTUALIZADO -->
+  <!-- REDES SOCIALES -->
   <div class="redes-sociales">
     <div class="redes-titulo">📱 Síguenos en nuestras redes sociales</div>
     <div class="redes-grid">
@@ -747,4 +751,4 @@
 
 </div>
 </body>
-</html>s
+</html>
