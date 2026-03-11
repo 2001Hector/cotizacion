@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <link rel="icon" type="image/png" href="logo.jpeg">
   <title>AYOTI · software a tu medida</title>
-  <!-- Font Awesome para iconos modernos -->
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* === RESET / BASE === */
     * {
       margin: 0;
       padding: 0;
@@ -16,10 +15,10 @@
     }
 
     body {
-      background: #f5f8fc;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f0f5fa;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.5;
-      color: #1a2639;
+      color: #1a2b3f;
       padding: 0.8rem;
     }
 
@@ -27,24 +26,23 @@
       max-width: 1280px;
       margin: 0 auto;
       background: white;
-      border-radius: 2rem 2rem 1.5rem 1.5rem;
-      box-shadow: 0 20px 40px -10px rgba(0, 20, 50, 0.15);
+      border-radius: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 20, 40, 0.25);
       overflow: hidden;
-      padding: 1.5rem 1rem;
+      padding: 1.5rem 1.2rem;
     }
 
-    /* === PORTADA === */
+    /* PORTADA */
     .portada-wrapper {
-      margin: -1.5rem -1rem 1.5rem -1rem;
+      margin: -1.5rem -1.2rem 1.5rem -1.2rem;
     }
     .portada {
       position: relative;
       width: 100%;
-      height: 250px;
+      height: 260px;
       background-image: url('gu.jpeg');
       background-size: cover;
       background-position: center 30%;
-      background-repeat: no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -57,442 +55,500 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(95deg, rgba(10, 30, 60, 0.8) 0%, rgba(25, 55, 100, 0.6) 100%);
+      background: linear-gradient(95deg, #0a1e3c 0%, #1a3b6e 100%);
+      opacity: 0.85;
       z-index: 1;
     }
     .portada-contenido {
       position: relative;
       z-index: 2;
-      max-width: 800px;
       padding: 1rem;
     }
     .portada-contenido h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 700;
       color: white;
-      text-shadow: 0 4px 25px rgba(0,15,40,0.7);
+      text-shadow: 0 4px 20px rgba(0,0,0,0.4);
       margin-bottom: 0.3rem;
       line-height: 1.2;
     }
     .portada-contenido .portada-lema {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: rgba(255,255,255,0.95);
-      background: rgba(20,45,90,0.4);
-      backdrop-filter: blur(3px);
+      font-size: 1.3rem;
+      color: white;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(5px);
       display: inline-block;
-      padding: 0.3rem 1.5rem;
+      padding: 0.4rem 2rem;
       border-radius: 60px;
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.3);
     }
 
-    /* === HEADER CON LOGO Y NOMBRE === */
+    /* HEADER */
     .header-empresa {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       flex-wrap: wrap;
-      background: linear-gradient(90deg, #f0f6ff 0%, #ffffff 80%);
-      padding: 1.2rem 1rem;
-      border-radius: 3rem;
-      border: 1px solid #d6e3f5;
+      background: linear-gradient(90deg, #f0f7ff, #ffffff);
+      padding: 1.5rem 1.5rem;
+      border-radius: 4rem;
+      border: 1px solid #d0e2ff;
     }
 
     .logo-img {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       border-radius: 30%;
       object-fit: cover;
-      border: 3px solid #acc9f0;
-      background: #fff;
-      box-shadow: 0 8px 16px rgba(0,40,80,0.15);
+      border: 4px solid white;
+      box-shadow: 0 10px 20px rgba(0,40,80,0.2);
     }
 
     .nombre-empresa {
-      font-size: 2rem;
+      font-size: 2.3rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
-      background: linear-gradient(145deg, #0f2b4f, #214b7a);
+      background: linear-gradient(145deg, #0f2b4f, #2563eb);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
 
     .eslogan-header {
-      color: #2e4b74;
-      font-weight: 500;
-      font-size: 1rem;
-      background: rgba(255,255,255,0.7);
-      padding: 0.3rem 1rem;
+      color: #2563eb;
+      font-weight: 600;
+      font-size: 1.1rem;
+      background: #e8f0fe;
+      padding: 0.5rem 1.8rem;
       border-radius: 40px;
-      border: 1px dashed #abc0d9;
-      text-align: center;
+      border: 1px solid #b9d2fc;
       width: 100%;
+      text-align: center;
     }
 
-    /* === TIPOGRAFÍA === */
+    /* TIPOGRAFÍA */
     h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
       background: linear-gradient(145deg, #0b1e33, #1e3a6f);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 1.7rem;
+      font-size: 2rem;
       font-weight: 700;
       color: #0b2b4a;
-      border-left: 6px solid #3b82f6;
-      padding-left: 1rem;
-      margin: 2rem 0 1.2rem 0;
+      border-left: 6px solid #2563eb;
+      padding-left: 1.2rem;
+      margin: 2.5rem 0 1.8rem 0;
     }
 
-    .categoria-titulo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #0b2b4a;
-      margin: 2rem 0 1rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: linear-gradient(90deg, #e6f0ff, transparent);
-      padding: 0.6rem 1rem;
-      border-radius: 50px;
-    }
-    .categoria-titulo i {
-      color: #3b82f6;
-      font-size: 1.6rem;
-    }
-
-    /* === HERO === */
+    /* HERO */
     .hero {
-      background: linear-gradient(135deg, #eef2f9 0%, #ffffff 100%);
-      padding: 1.5rem 1.2rem;
-      border-radius: 1.5rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid #e2e8f0;
+      background: linear-gradient(135deg, #e8f0fe, #ffffff);
+      padding: 1.8rem 1.8rem;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #d9e6ff;
     }
     .hero p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: #1e293b;
-      margin-bottom: 0.5rem;
     }
 
-    /* === TARJETAS DE SERVICIOS === */
+    /* SERVICIOS */
     .servicios-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.2rem;
-      margin: 1.5rem 0 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
     }
     .card {
-      background: #ffffff;
-      border-radius: 1.5rem;
-      padding: 1.5rem 1.2rem;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-      border: 1px solid #e9eef3;
-      transition: all 0.2s ease;
+      background: white;
+      border-radius: 2rem;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 20px 30px -10px rgba(0, 30, 70, 0.1);
+      border: 1px solid #e2edff;
+      transition: all 0.3s;
     }
-    .card .emoji-tag { font-size: 2rem; margin-bottom: 0.5rem; }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #2563eb;
+    }
+    .card .emoji-tag { font-size: 2.5rem; margin-bottom: 0.5rem; }
     .card h4 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #0c4a6e;
-      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1e3a6f;
+      margin-bottom: 1rem;
     }
-    .card p { color: #2d3c54; margin-bottom: 0.8rem; font-size: 0.9rem; }
-    .card ul { list-style: none; margin: 0.8rem 0; }
+    .card ul { list-style: none; margin: 1rem 0; }
     .card li {
-      margin-bottom: 0.4rem;
-      padding-left: 1.4rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.6rem;
       position: relative;
-      font-size: 0.9rem;
+      color: #334155;
     }
     .card li::before {
-      content: "▹";
-      color: #3b82f6;
+      content: "✓";
+      color: #2563eb;
+      font-weight: bold;
       position: absolute;
       left: 0;
     }
     .whatsapp-card-btn {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.4rem;
+      gap: 0.5rem;
       background: #25D366;
       color: white;
       font-weight: 600;
-      padding: 0.6rem 1rem;
-      border-radius: 40px;
+      padding: 0.8rem;
+      border-radius: 60px;
       text-decoration: none;
-      font-size: 0.9rem;
-      margin-top: 0.8rem;
-      width: 100%;
+      font-size: 1rem;
+      margin-top: 1.2rem;
+      transition: all 0.2s;
+      border: 1px solid #128C7E;
+    }
+    .whatsapp-card-btn:hover {
+      background: #20b359;
+      transform: scale(1.02);
     }
 
-    /* === MODALIDAD DE PAGO === */
-    .pago-container {
-      background: linear-gradient(115deg, #f0f7ff 0%, #ffffff 80%);
-      border-radius: 2rem;
-      padding: 1.5rem;
-      margin: 1.5rem 0 1rem;
-      border: 1px solid #bdd6fd;
+    /* SECCIÓN DE PAGO REDISEÑADA - ELEGANTE */
+    .pago-elegante {
+      background: linear-gradient(135deg, #0b2b4a 0%, #1e4b8a 100%);
+      border-radius: 2.5rem;
+      padding: 2.5rem 2rem;
+      margin: 2.5rem 0;
+      color: white;
+      box-shadow: 0 30px 40px -15px rgba(0, 40, 80, 0.4);
+      position: relative;
+      overflow: hidden;
     }
-    .pago-destacado {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 1.2rem 1.2rem;
-      border-left: 6px solid #3b82f6;
+    .pago-elegante::before {
+      content: "💰";
+      position: absolute;
+      font-size: 10rem;
+      opacity: 0.1;
+      bottom: -20px;
+      right: -20px;
+      transform: rotate(15deg);
     }
-    .pago-item {
+    .pago-titulo {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      font-size: 1rem;
-      margin: 0.8rem 0;
-      padding: 0.5rem 0.8rem;
-      background: rgba(59,130,246,0.04);
-      border-radius: 60px;
     }
-    .pago-check {
-      background: #3b82f6;
-      color: white;
+    .pago-titulo i {
+      background: rgba(255,255,255,0.2);
+      padding: 0.8rem;
       border-radius: 50%;
-      width: 24px;
-      height: 24px;
+      font-size: 1.8rem;
+    }
+    .pago-opciones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .pago-opcion {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 1.8rem;
+      padding: 1.8rem 1.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: transform 0.3s;
+    }
+    .pago-opcion:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.15);
+    }
+    .pago-opcion h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .pago-opcion h3 i {
+      color: #ffd966;
+    }
+    .pago-opcion p {
+      margin-bottom: 1rem;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+    .pago-detalle {
+      background: rgba(255,255,255,0.2);
+      border-radius: 60px;
+      padding: 0.5rem 1.2rem;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .pago-incluye {
+      margin-top: 2rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .pago-incluye h4 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .pago-incluye ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.8rem;
+    }
+    .pago-incluye li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .pago-incluye li i {
+      color: #4ade80;
+    }
+    .pago-consulta {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .pago-consulta a {
+      background: white;
+      color: #0b2b4a;
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.2rem;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.9rem;
+      gap: 0.8rem;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    .pago-consulta a:hover {
+      background: transparent;
+      color: white;
+      border-color: white;
     }
 
-    /* === CARRUSEL POR CATEGORÍAS === */
-    .carrusel-categoria {
-      margin: 1.5rem 0 2.5rem;
+    /* EQUIPO DE INGENIEROS CON FOTOS */
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem;
     }
-    .carrusel-grid {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      padding: 0.5rem 0.2rem 1.2rem;
-      scrollbar-width: thin;
-      scrollbar-color: #3b82f6 #e2e8f0;
-      -webkit-overflow-scrolling: touch;
-    }
-    .carrusel-grid::-webkit-scrollbar { height: 6px; }
-    .carrusel-grid::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 20px; }
-    .carrusel-grid::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 20px; }
-    
-    .proyecto-item {
-      min-width: 180px;
-      max-width: 200px;
+    .ingeniero-card {
       background: white;
-      border-radius: 1.5rem;
-      padding: 1rem;
-      box-shadow: 0 12px 25px -8px rgba(0, 30, 70, 0.15);
-      border: 1px solid #d6e3ff;
-      transition: transform 0.2s;
+      border-radius: 2.5rem;
+      padding: 2rem 1.5rem 1.8rem;
+      text-align: center;
+      box-shadow: 0 20px 35px -10px rgba(0, 30, 60, 0.15);
+      border: 1px solid #e2edff;
+      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
     }
-    .proyecto-item:hover { transform: translateY(-5px); }
-    
-    .proyecto-imagen {
-      width: 100%;
+    .ingeniero-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(135deg, #2563eb 0%, #1e4b8a 100%);
+      opacity: 0.1;
+    }
+    .ingeniero-card:hover {
+      transform: translateY(-8px);
+      border-color: #2563eb;
+      box-shadow: 0 30px 45px -12px #2563eb40;
+    }
+    .ingeniero-foto {
+      width: 160px;
       height: 160px;
-      border-radius: 1rem;
-      margin-bottom: 0.8rem;
+      border-radius: 50%;
+      margin: 0 auto 1.2rem;
+      border: 5px solid white;
+      box-shadow: 0 10px 0 #2563eb, 0 15px 30px -5px #1e3a6f;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      border: 2px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: opacity 0.2s;
+      background-color: #f0f7ff;
+      position: relative;
+      z-index: 2;
     }
-    .proyecto-imagen:active {
-      opacity: 0.8;
+    /* Fotos de los ingenieros (imágenes de stock elegantes) */
+    .ingeniero-card:nth-child(1) .ingeniero-foto { 
+      background-image: url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400'); 
     }
-    .proyecto-titulo { 
-      font-size: 1rem; 
-      font-weight: 600; 
-      color: #0c4a6e;
-      margin-bottom: 0.3rem;
+    .ingeniero-card:nth-child(2) .ingeniero-foto { 
+      background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400'); 
     }
-    .proyecto-badge {
-      display: inline-block;
-      background: #e0edff;
-      color: #024b8a;
-      padding: 0.2rem 0.8rem;
-      border-radius: 30px;
-      font-size: 0.7rem;
+    .ingeniero-card:nth-child(3) .ingeniero-foto { 
+      background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400'); 
     }
-
-    /* === CLIENTES SATISFECHOS === */
-    .clientes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0 2rem;
-    }
-    .cliente-card {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 1.2rem 0.8rem;
-      text-align: center;
-      box-shadow: 0 8px 20px -6px rgba(0,32,64,0.12);
-      border: 1px solid #d9e7fa;
-    }
-    .cliente-imagen {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin: 0 auto 0.8rem;
-      border: 3px solid white;
-      box-shadow: 0 5px 0 #1e3f6e;
-      background-size: cover;
-      background-position: center;
-      background-color: #e0edff;
-    }
-    .cliente-card:nth-child(1) .cliente-imagen { background-image: url('cliente1.png'); }
-    .cliente-card:nth-child(2) .cliente-imagen { background-image: url('cliente2.png'); }
-    .cliente-card:nth-child(3) .cliente-imagen { background-image: url('cliente3.png'); }
-    .cliente-card:nth-child(4) .cliente-imagen { background-image: url('cliente4.png'); }
-    .cliente-card:nth-child(5) .cliente-imagen { background-image: url('cliente5.png'); }
-    .cliente-nombre { font-weight: 700; color: #0b2f54; font-size: 1rem; }
-    .cliente-estrellas { color: #f5b342; font-size: 1rem; margin-top: 0.3rem; }
-
-    /* === EQUIPO (SOLO NOMBRES, SIN FOTOS) === */
-    .equipo-simple {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1.5rem 0 2rem;
-      background: linear-gradient(135deg, #f0f7ff, #ffffff);
-      border-radius: 3rem;
-      padding: 2rem 1rem;
-      border: 1px solid #c7dfff;
-    }
-    .equipo-nombre {
-      background: white;
-      padding: 0.7rem 1.5rem;
-      border-radius: 60px;
+    .ingeniero-nombre {
+      font-size: 2rem;
       font-weight: 700;
       color: #0b2b4a;
-      border: 2px solid #3b82f6;
-      box-shadow: 0 5px 0 #1e3f6e;
-      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+    .ingeniero-titulo {
+      background: #2563eb;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 60px;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0.8rem 0 1rem;
+    }
+    .ingeniero-habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 1rem 0 1.2rem;
+    }
+    .habilidad-badge {
+      background: #e8f0fe;
+      color: #2563eb;
+      padding: 0.4rem 1.2rem;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid #b9d2fc;
+    }
+    .ingeniero-descripcion {
+      color: #334155;
+      font-size: 1rem;
+      line-height: 1.6;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 1.5rem;
+      margin-top: 0.8rem;
+      border: 1px solid #e2edff;
+    }
+    .ingeniero-experiencia {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #f59e0b;
+      font-weight: 600;
+      margin: 1rem 0 0.5rem;
     }
 
-    /* === REDES SOCIALES CON LOGOS MODERNOS === */
+    /* REDES SOCIALES MEJORADAS */
     .redes-sociales {
-      background: linear-gradient(145deg, #e9f0fc, #ffffff);
+      background: linear-gradient(145deg, #f0f7ff, #ffffff);
       border-radius: 3rem;
-      padding: 1.8rem 1.5rem;
-      margin: 2rem 0 1rem;
+      padding: 2.5rem 2rem;
+      margin: 2.5rem 0 1.5rem;
       text-align: center;
       border: 1px solid #b9d2fc;
     }
     .redes-titulo {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #113355;
-      margin-bottom: 1.2rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0b2b4a;
+      margin-bottom: 2rem;
     }
-    .redes-icons {
+    .redes-grid {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 3rem;
       flex-wrap: wrap;
     }
-    .redes-icons a {
+    .red-social {
       text-decoration: none;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
-      font-weight: 600;
-      transition: transform 0.2s;
+      gap: 0.8rem;
+      transition: all 0.3s;
     }
-    .redes-icons a:hover { transform: scale(1.1); }
-    .redes-icon {
-      width: 60px;
-      height: 60px;
-      background: white;
+    .red-social:hover {
+      transform: translateY(-8px);
+    }
+    .red-icon {
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      box-shadow: 0 10px 15px -5px rgba(0,60,130,0.3);
-      border: 2px solid white;
+      font-size: 3rem;
+      box-shadow: 0 15px 25px -8px rgba(0,0,0,0.2);
+      border: 4px solid white;
+      transition: all 0.3s;
     }
-    .redes-icon.facebook { background: #1877F2; color: white; }
-    .redes-icon.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5); color: white; }
-    .redes-icon.tiktok { background: #000000; color: white; }
-    .redes-nombre { color: #1e3f6e; font-size: 0.9rem; }
+    .red-social:hover .red-icon {
+      box-shadow: 0 20px 35px -8px currentColor;
+    }
+    .red-icon.facebook { 
+      background: #1877F2; 
+      color: white;
+      box-shadow: 0 10px 20px -5px #1877F2;
+    }
+    .red-icon.instagram { 
+      background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5); 
+      color: white;
+      box-shadow: 0 10px 20px -5px #d62976;
+    }
+    .red-icon.tiktok { 
+      background: #000000; 
+      color: white;
+      box-shadow: 0 10px 20px -5px #333;
+    }
+    .red-nombre {
+      color: #1e3a6f;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .red-seguidores {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
 
+    /* FOOTER */
     .footer-note {
       margin-top: 2rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      background: #f0f4fa;
-      padding: 1rem 1.5rem;
+      background: #f0f7ff;
+      padding: 1.5rem 2rem;
       border-radius: 3rem;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 1rem;
+      color: #1e3a6f;
+      font-weight: 500;
     }
 
-    /* === LIGHTBOX PARA VER IMÁGENES === */
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-    .lightbox.active {
-      display: flex;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 20px;
-      border: 4px solid white;
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
-      font-size: 3rem;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    /* === RESPONSIVE FINO === */
-    @media (max-width: 480px) {
+    @media (max-width: 640px) {
       .portada { height: 200px; }
       .portada-contenido h1 { font-size: 1.8rem; }
-      .portada-contenido .portada-lema { font-size: 1rem; }
-      h2 { font-size: 1.5rem; }
-      .categoria-titulo { font-size: 1.3rem; }
-      .proyecto-item { min-width: 150px; }
-      .proyecto-imagen { height: 130px; }
+      .pago-titulo { font-size: 1.8rem; }
+      .red-icon { width: 70px; height: 70px; font-size: 2.3rem; }
     }
   </style>
 </head>
@@ -509,14 +565,14 @@
     </div>
   </div>
   
-  <!-- HEADER CON LOGO -->
+  <!-- HEADER -->
   <div class="header-empresa">
     <img src="logo.jpeg" alt="AYOTI logo" class="logo-img" onerror="this.style.display='none';">
     <span class="nombre-empresa">AYOTI</span>
     <span class="eslogan-header">Automatización y Optimización Tecnológica Integral</span>
   </div>
 
-  <!-- ENCABEZADO PRINCIPAL -->
+  <!-- HERO -->
   <h1>💻 Desarrollo de Software · Páginas Web · Apps Móviles</h1>
   <div class="hero">
     <p><strong>Desarrollamos soluciones tecnológicas modernas, seguras y adaptadas</strong> a las necesidades de tu negocio.</p>
@@ -529,166 +585,166 @@
     <div class="card">
       <div class="emoji-tag">🌐</div>
       <h4>Página Web Estática</h4>
-      <p>Presencia profesional en internet con diseño personalizado.</p>
-      <ul><li>Diseño responsive</li><li>Secciones inicio, servicios, contacto</li><li>Publicación incluida</li></ul>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20P%C3%A1gina%20Web%20Est%C3%A1tica" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar</a>
+      <ul>
+        <li>Diseño responsive profesional</li>
+        <li>Secciones inicio, servicios, contacto</li>
+        <li>Optimización de velocidad</li>
+        <li>Publicación incluida</li>
+      </ul>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20P%C3%A1gina%20Web%20Est%C3%A1tica" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</a>
     </div>
     <div class="card">
       <div class="emoji-tag">🖥️</div>
       <h4>Sistema Web Gestión</h4>
-      <p>Optimiza procesos con inventarios, usuarios y reportes.</p>
-      <ul><li>Gestión de inventarios</li><li>Panel administrativo</li><li>Reportes y estadísticas</li></ul>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20Software%20Web%20con%20Base%20de%20Datos" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar</a>
+      <ul>
+        <li>Gestión de inventarios</li>
+        <li>Panel administrativo</li>
+        <li>Reportes y estadísticas</li>
+        <li>Control de usuarios</li>
+      </ul>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20Software%20Web%20con%20Base%20de%20Datos" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</a>
     </div>
     <div class="card">
       <div class="emoji-tag">📱</div>
       <h4>Apps Móviles</h4>
-      <p>Android e iOS. Gestión empresarial, apps para clientes.</p>
-      <ul><li>Integración con web</li><li>Solución completa</li></ul>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20Apps%20M%C3%B3viles" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar</a>
+      <ul>
+        <li>Android e iOS</li>
+        <li>Gestión empresarial</li>
+        <li>Apps para clientes</li>
+        <li>Integración con web</li>
+      </ul>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20Apps%20M%C3%B3viles" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</a>
     </div>
   </div>
 
-  <!-- MODALIDAD DE PAGO -->
-  <h2>💳 Modalidad de Pago Flexible</h2>
-  <div class="pago-container">
-    <div class="pago-destacado">
-      <div class="pago-item"><span class="pago-check">✓</span> <strong>Pago de contado o mensual</strong> (elige la opción que más te convenga)</div>
-      <div class="pago-item"><span class="pago-check">✓</span> <strong>Mantenimiento incluido:</strong> soporte, actualizaciones, hosting</div>
-      <p style="margin-top: 1.5rem; padding: 0.8rem; background: #e6f0ff; border-radius: 2rem; font-size: 0.9rem;">
-        📌 El valor de mantenimiento depende del nivel de soporte, actualizaciones y complejidad.
-      </p>
+  <!-- SECCIÓN DE PAGO ELEGANTE (REDISEÑADA) -->
+  <div class="pago-elegante">
+    <div class="pago-titulo">
+      <i class="fas fa-credit-card"></i> 
+      Modalidad de Pago Flexible
+    </div>
+    
+    <div class="pago-opciones">
+      <div class="pago-opcion">
+        <h3><i class="fas fa-coins"></i> Pago de Contado</h3>
+        <p>Obtén un <strong>descuento especial</strong> pagando el total de tu proyecto por adelantado.</p>
+        <div class="pago-detalle">Ahorra hasta 15%</div>
+      </div>
+      
+      <div class="pago-opcion">
+        <h3><i class="fas fa-calendar-alt"></i> Pago Mensual</h3>
+        <p>Divide tu inversión en cómodas cuotas mensuales sin intereses.</p>
+        <div class="pago-detalle">Hasta 12 meses</div>
+      </div>
+    </div>
+
+    <div class="pago-incluye">
+      <h4><i class="fas fa-check-circle"></i> Todo incluye mantenimiento:</h4>
+      <ul>
+        <li><i class="fas fa-shield-alt"></i> Soporte técnico</li>
+        <li><i class="fas fa-sync-alt"></i> Actualizaciones</li>
+        <li><i class="fas fa-server"></i> Hosting incluido</li>
+        <li><i class="fas fa-lock"></i> Seguridad</li>
+        <li><i class="fas fa-database"></i> Backups diarios</li>
+        <li><i class="fas fa-headset"></i> Asistencia 24/7</li>
+      </ul>
+    </div>
+
+    <div class="pago-consulta">
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20consultar%20los%20planes%20de%20pago%20personalizados" target="_blank">
+        <i class="fab fa-whatsapp"></i> Consultar planes personalizados
+      </a>
     </div>
   </div>
 
-  <!-- ===== PROYECTOS POR CATEGORÍAS ===== -->
-  <h2>📸 Proyectos recientes</h2>
-  
-  <!-- CATEGORÍA: SOFTWARE BARBERÍA (imágenes locales) -->
-  <div class="categoria-titulo">
-    <i class="fas fa-cut"></i> Software Barbería
-  </div>
-  <div class="carrusel-categoria">
-    <div class="carrusel-grid">
-      <div class="proyecto-item" onclick="abrirImagen('1.png')"><div class="proyecto-imagen" style="background-image: url('1.png')"></div><div class="proyecto-titulo">Sistema de Turnos</div><span class="proyecto-badge">Barbería</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('2.png')"><div class="proyecto-imagen" style="background-image: url('2.png')"></div><div class="proyecto-titulo">Gestión Clientes</div><span class="proyecto-badge">Barbería</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('3.png')"><div class="proyecto-imagen" style="background-image: url('3.png')"></div><div class="proyecto-titulo">Inventario Productos</div><span class="proyecto-badge">Barbería</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('4.png')"><div class="proyecto-imagen" style="background-image: url('4.png')"></div><div class="proyecto-titulo">Caja Diaria</div><span class="proyecto-badge">Barbería</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('5.png')"><div class="proyecto-imagen" style="background-image: url('5.png')"></div><div class="proyecto-titulo">Reportes</div><span class="proyecto-badge">Barbería</span></div>
-    </div>
-  </div>
-
-  <!-- CATEGORÍA: SOFTWARE PRÉSTAMOS (imágenes locales) -->
-  <div class="categoria-titulo">
-    <i class="fas fa-hand-holding-usd"></i> Software Préstamos
-  </div>
-  <div class="carrusel-categoria">
-    <div class="carrusel-grid">
-      <div class="proyecto-item" onclick="abrirImagen('prestamo1.png')"><div class="proyecto-imagen" style="background-image: url('prestamo1.png')"></div><div class="proyecto-titulo">Gestión de Préstamos</div><span class="proyecto-badge">Fintech</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('prestamo2.png')"><div class="proyecto-imagen" style="background-image: url('prestamo2.png')"></div><div class="proyecto-titulo">Cobranzas</div><span class="proyecto-badge">Préstamos</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('prestamo3.png')"><div class="proyecto-imagen" style="background-image: url('prestamo3.png')"></div><div class="proyecto-titulo">Calculadora de Interés</div><span class="proyecto-badge">Préstamos</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('prestamo4.png')"><div class="proyecto-imagen" style="background-image: url('prestamo4.png')"></div><div class="proyecto-titulo">Historial de Pagos</div><span class="proyecto-badge">Préstamos</span></div>
-    </div>
-  </div>
-
-  <!-- CATEGORÍA: PÁGINAS WEB (imágenes locales) -->
-  <div class="categoria-titulo">
-    <i class="fas fa-globe"></i> Páginas Web
-  </div>
-  <div class="carrusel-categoria">
-    <div class="carrusel-grid">
-      <div class="proyecto-item" onclick="abrirImagen('web1.png')"><div class="proyecto-imagen" style="background-image: url('web1.png')"></div><div class="proyecto-titulo">Corporativa</div><span class="proyecto-badge">Web</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('web2.png')"><div class="proyecto-imagen" style="background-image: url('web2.png')"></div><div class="proyecto-titulo">E-commerce</div><span class="proyecto-badge">Web</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('web3.png')"><div class="proyecto-imagen" style="background-image: url('web3.png')"></div><div class="proyecto-titulo">Landing Page</div><span class="proyecto-badge">Web</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('web4.png')"><div class="proyecto-imagen" style="background-image: url('web4.png')"></div><div class="proyecto-titulo">Portafolio</div><span class="proyecto-badge">Web</span></div>
-    </div>
-  </div>
-
-  <!-- CATEGORÍA: APLICACIONES MÓVILES (10 imágenes DE INTERNET) -->
-  <div class="categoria-titulo">
-    <i class="fas fa-mobile-alt"></i> Aplicaciones Móviles
-  </div>
-  <div class="carrusel-categoria">
-    <div class="carrusel-grid">
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400')"></div><div class="proyecto-titulo">WhatsApp</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400')"></div><div class="proyecto-titulo">Instagram</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400')"></div><div class="proyecto-titulo">Facebook</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162616308-2a8a6b14a1e3?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162616308-2a8a6b14a1e3?w=400')"></div><div class="proyecto-titulo">Twitter</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617263-4ec3060a058e?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617263-4ec3060a058e?w=400')"></div><div class="proyecto-titulo">TikTok</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162616478-46e635b6868a?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162616478-46e635b6868a?w=400')"></div><div class="proyecto-titulo">YouTube</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162616679-2c8d3a4c1c6d?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162616679-2c8d3a4c1c6d?w=400')"></div><div class="proyecto-titulo">Spotify</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617217-697a6c9b3b8a?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617217-697a6c9b3b8a?w=400')"></div><div class="proyecto-titulo">Netflix</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617246-2b1c7a7a4c8b?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617246-2b1c7a7a4c8b?w=400')"></div><div class="proyecto-titulo">Uber</div><span class="proyecto-badge">App Móvil</span></div>
-      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617269-4d3e7b1a9c2d?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617269-4d3e7b1a9c2d?w=400')"></div><div class="proyecto-titulo">Google Maps</div><span class="proyecto-badge">App Móvil</span></div>
-    </div>
-  </div>
-
-  <!-- CLIENTES SATISFECHOS -->
-  <h2>🤝 Clientes satisfechos</h2>
-  <div class="clientes-grid">
-    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Distribuidora XYZ</div><div class="cliente-estrellas">★★★★★</div></div>
-    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Clínica del Sur</div><div class="cliente-estrellas">★★★★★</div></div>
-    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Grupo Éxito</div><div class="cliente-estrellas">★★★★★</div></div>
-    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Constructora ABC</div><div class="cliente-estrellas">★★★★★</div></div>
-    <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Fintech Andes</div><div class="cliente-estrellas">★★★★★</div></div>
-  </div>
-
-  <!-- EQUIPO SOLO NOMBRES (SIN FOTOS) -->
+  <!-- EQUIPO DE INGENIEROS CON FOTOS Y HABILIDADES -->
   <h2>🧑‍💻 Nuestro equipo de ingenieros</h2>
-  <div class="equipo-simple">
-    <span class="equipo-nombre">Junior Causil</span>
-    <span class="equipo-nombre">Kevin Boca Negra</span>
-    <span class="equipo-nombre">Héctor Chamorro</span>
+  <div class="equipo-grid">
+    <!-- Junior Causil -->
+    <div class="ingeniero-card">
+      <div class="ingeniero-foto"></div>
+      <div class="ingeniero-nombre">Junior Causil</div>
+      <span class="ingeniero-titulo">Ingeniero de Sistemas</span>
+      <div class="ingeniero-habilidades">
+        <span class="habilidad-badge">Frontend</span>
+        <span class="habilidad-badge">UI/UX</span>
+        <span class="habilidad-badge">React</span>
+      </div>
+      <div class="ingeniero-experiencia">
+        <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+        <span>8 años exp.</span>
+      </div>
+      <div class="ingeniero-descripcion">
+        "Apasionado por crear interfaces hermosas y fáciles de usar. Especialista en hacer que la tecnología sea simple para todos."
+      </div>
+    </div>
+
+    <!-- Kevin Boca Negra -->
+    <div class="ingeniero-card">
+      <div class="ingeniero-foto"></div>
+      <div class="ingeniero-nombre">Kevin Boca Negra</div>
+      <span class="ingeniero-titulo">Ingeniero de Sistemas</span>
+      <div class="ingeniero-habilidades">
+        <span class="habilidad-badge">Backend</span>
+        <span class="habilidad-badge">Bases de datos</span>
+        <span class="habilidad-badge">APIs</span>
+      </div>
+      <div class="ingeniero-experiencia">
+        <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+        <span>6 años exp.</span>
+      </div>
+      <div class="ingeniero-descripcion">
+        "Experto en que todo funcione a la perfección detrás de escena. Sistemas robustos, seguros y escalables."
+      </div>
+    </div>
+
+    <!-- Héctor Chamorro -->
+    <div class="ingeniero-card">
+      <div class="ingeniero-foto"></div>
+      <div class="ingeniero-nombre">Héctor Chamorro</div>
+      <span class="ingeniero-titulo">Ingeniero de Sistemas</span>
+      <div class="ingeniero-habilidades">
+        <span class="habilidad-badge">DevOps</span>
+        <span class="habilidad-badge">Arquitectura</span>
+        <span class="habilidad-badge">Cloud</span>
+      </div>
+      <div class="ingeniero-experiencia">
+        <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+        <span>10 años exp.</span>
+      </div>
+      <div class="ingeniero-descripcion">
+        "Arquitecto de soluciones. Me encargo de que los proyectos sean rápidos, confiables y crezcan sin límites."
+      </div>
+    </div>
   </div>
 
-  <!-- REDES SOCIALES CON LOGOS MODERNOS -->
+  <!-- REDES SOCIALES MEJORADAS -->
   <div class="redes-sociales">
-    <div class="redes-titulo">📱 Síguenos en nuestras redes</div>
-    <div class="redes-icons">
-      <a href="#" target="_blank">
-        <div class="redes-icon facebook"><i class="fab fa-facebook-f"></i></div>
-        <span class="redes-nombre">Facebook</span>
+    <div class="redes-titulo">📱 Conéctate con nosotros</div>
+    <div class="redes-grid">
+      <a href="#" target="_blank" class="red-social">
+        <div class="red-icon facebook"><i class="fab fa-facebook-f"></i></div>
+        <span class="red-nombre">Facebook</span>
+        <span class="red-seguidores">@ayoti.software</span>
       </a>
-      <a href="#" target="_blank">
-        <div class="redes-icon instagram"><i class="fab fa-instagram"></i></div>
-        <span class="redes-nombre">Instagram</span>
+      <a href="#" target="_blank" class="red-social">
+        <div class="red-icon instagram"><i class="fab fa-instagram"></i></div>
+        <span class="red-nombre">Instagram</span>
+        <span class="red-seguidores">@ayoti_tech</span>
       </a>
-      <a href="#" target="_blank">
-        <div class="redes-icon tiktok"><i class="fab fa-tiktok"></i></div>
-        <span class="redes-nombre">TikTok</span>
+      <a href="#" target="_blank" class="red-social">
+        <div class="red-icon tiktok"><i class="fab fa-tiktok"></i></div>
+        <span class="red-nombre">TikTok</span>
+        <span class="red-seguidores">@ayoti.dev</span>
       </a>
     </div>
   </div>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- FOOTER -->
   <div class="footer-note">
-    <p>💡 <strong>AYOTI</strong> – Automatización y Optimización Tecnológica Integral</p>
+    <p>💡 <strong>AYOTI</strong> – Automatización y Optimización Tecnológica Integral · Transformamos tus ideas en software</p>
   </div>
 
 </div>
-
-<!-- LIGHTBOX PARA VER IMÁGENES -->
-<div class="lightbox" id="lightbox" onclick="cerrarImagen()">
-  <span class="lightbox-close" onclick="cerrarImagen()">&times;</span>
-  <img id="lightbox-img" src="">
-</div>
-
-<script>
-  function abrirImagen(url) {
-    document.getElementById('lightbox-img').src = url;
-    document.getElementById('lightbox').classList.add('active');
-  }
-  
-  function cerrarImagen() {
-    document.getElementById('lightbox').classList.remove('active');
-  }
-
-  // Cerrar con tecla ESC
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      cerrarImagen();
-    }
-  });
-</script>
 </body>
 </html>
