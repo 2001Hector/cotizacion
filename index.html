@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <link rel="icon" type="image/png" href="logo.jpeg">
   <title>AYOTI · software a tu medida</title>
+  <!-- Font Awesome para iconos modernos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* === RESET / BASE === */
     * {
@@ -18,27 +20,27 @@
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.5;
       color: #1a2639;
-      padding: 1.5rem;
+      padding: 0.8rem;
     }
 
     .contenedor {
       max-width: 1280px;
       margin: 0 auto;
       background: white;
-      border-radius: 2.5rem 2.5rem 2rem 2rem;
+      border-radius: 2rem 2rem 1.5rem 1.5rem;
       box-shadow: 0 20px 40px -10px rgba(0, 20, 50, 0.15);
       overflow: hidden;
-      padding: 2.5rem 2rem;
+      padding: 1.5rem 1rem;
     }
 
-    /* === PORTADA (exactamente como la solicitaste) === */
+    /* === PORTADA === */
     .portada-wrapper {
-      margin: -2.5rem -2rem 2rem -2rem;
+      margin: -1.5rem -1rem 1.5rem -1rem;
     }
     .portada {
       position: relative;
       width: 100%;
-      height: 380px;
+      height: 250px;
       background-image: url('gu.jpeg');
       background-size: cover;
       background-position: center 30%;
@@ -55,37 +57,33 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(95deg, rgba(10, 30, 60, 0.75) 0%, rgba(25, 55, 100, 0.55) 70%, rgba(45, 90, 140, 0.3) 100%);
+      background: linear-gradient(95deg, rgba(10, 30, 60, 0.8) 0%, rgba(25, 55, 100, 0.6) 100%);
       z-index: 1;
     }
     .portada-contenido {
       position: relative;
       z-index: 2;
       max-width: 800px;
-      padding: 1rem 2rem;
+      padding: 1rem;
     }
     .portada-contenido h1 {
-      font-size: 3.3rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
       color: white;
       text-shadow: 0 4px 25px rgba(0,15,40,0.7);
-      -webkit-text-fill-color: white;
-      background: none;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
       line-height: 1.2;
     }
     .portada-contenido .portada-lema {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       font-weight: 400;
       color: rgba(255,255,255,0.95);
-      background: rgba(20,45,90,0.3);
+      background: rgba(20,45,90,0.4);
       backdrop-filter: blur(3px);
       display: inline-block;
-      padding: 0.4rem 2rem;
+      padding: 0.3rem 1.5rem;
       border-radius: 60px;
       border: 1px solid rgba(255,255,255,0.25);
-      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
 
     /* === HEADER CON LOGO Y NOMBRE === */
@@ -93,18 +91,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
       flex-wrap: wrap;
       background: linear-gradient(90deg, #f0f6ff 0%, #ffffff 80%);
-      padding: 1.8rem 1.8rem;
-      border-radius: 4rem;
+      padding: 1.2rem 1rem;
+      border-radius: 3rem;
       border: 1px solid #d6e3f5;
     }
 
     .logo-img {
-      width: 120px;
-      height: 120px;
+      width: 80px;
+      height: 80px;
       border-radius: 30%;
       object-fit: cover;
       border: 3px solid #acc9f0;
@@ -113,7 +111,7 @@
     }
 
     .nombre-empresa {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       background: linear-gradient(145deg, #0f2b4f, #214b7a);
@@ -125,17 +123,18 @@
     .eslogan-header {
       color: #2e4b74;
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 1rem;
       background: rgba(255,255,255,0.7);
-      padding: 0.4rem 1.5rem;
+      padding: 0.3rem 1rem;
       border-radius: 40px;
       border: 1px dashed #abc0d9;
       text-align: center;
+      width: 100%;
     }
 
     /* === TIPOGRAFÍA === */
     h1 {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       background: linear-gradient(145deg, #0b1e33, #1e3a6f);
@@ -146,75 +145,78 @@
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-weight: 700;
       color: #0b2b4a;
       border-left: 6px solid #3b82f6;
-      padding-left: 1.2rem;
-      margin: 2.5rem 0 1.5rem 0;
+      padding-left: 1rem;
+      margin: 2rem 0 1.2rem 0;
+    }
+
+    .categoria-titulo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0b2b4a;
+      margin: 2rem 0 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(90deg, #e6f0ff, transparent);
+      padding: 0.6rem 1rem;
+      border-radius: 50px;
+    }
+    .categoria-titulo i {
+      color: #3b82f6;
+      font-size: 1.6rem;
     }
 
     /* === HERO === */
     .hero {
       background: linear-gradient(135deg, #eef2f9 0%, #ffffff 100%);
-      padding: 1.8rem 2rem;
-      border-radius: 2rem;
-      margin-bottom: 2rem;
+      padding: 1.5rem 1.2rem;
+      border-radius: 1.5rem;
+      margin-bottom: 1.5rem;
       border: 1px solid #e2e8f0;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: #1e293b;
-      max-width: 85%;
       margin-bottom: 0.5rem;
-    }
-    .hero strong {
-      color: #1e4a7a;
     }
 
     /* === TARJETAS DE SERVICIOS === */
     .servicios-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0 1rem;
     }
     .card {
       background: #ffffff;
-      border-radius: 1.8rem;
-      padding: 1.8rem 1.5rem;
+      border-radius: 1.5rem;
+      padding: 1.5rem 1.2rem;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
       border: 1px solid #e9eef3;
       transition: all 0.2s ease;
-      display: flex;
-      flex-direction: column;
     }
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: #b3d0f0;
-      box-shadow: 0 20px 30px -8px rgba(45, 114, 210, 0.15);
-    }
-    .card .emoji-tag { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .card .emoji-tag { font-size: 2rem; margin-bottom: 0.5rem; }
     .card h4 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: #0c4a6e;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #dbeafe;
-      padding-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
     }
-    .card p { color: #2d3c54; margin-bottom: 1rem; font-size: 0.98rem; }
-    .card ul { list-style: none; margin: 1rem 0; }
+    .card p { color: #2d3c54; margin-bottom: 0.8rem; font-size: 0.9rem; }
+    .card ul { list-style: none; margin: 0.8rem 0; }
     .card li {
-      margin-bottom: 0.5rem;
-      padding-left: 1.6rem;
+      margin-bottom: 0.4rem;
+      padding-left: 1.4rem;
       position: relative;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
     .card li::before {
       content: "▹";
       color: #3b82f6;
-      font-weight: bold;
       position: absolute;
       left: 0;
     }
@@ -222,48 +224,39 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       background: #25D366;
       color: white;
       font-weight: 600;
-      padding: 0.7rem 1.2rem;
+      padding: 0.6rem 1rem;
       border-radius: 40px;
       text-decoration: none;
-      font-size: 0.95rem;
-      border: 1px solid #128C7E;
-      transition: 0.15s;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-top: 1rem;
-      width: fit-content;
-    }
-    .whatsapp-card-btn:hover {
-      background: #20b859;
-      transform: scale(1.02);
+      font-size: 0.9rem;
+      margin-top: 0.8rem;
+      width: 100%;
     }
 
-    /* === MODALIDAD DE PAGO (mejorada) === */
+    /* === MODALIDAD DE PAGO === */
     .pago-container {
       background: linear-gradient(115deg, #f0f7ff 0%, #ffffff 80%);
-      border-radius: 2.5rem;
-      padding: 2.2rem;
-      margin: 2rem 0 1rem;
+      border-radius: 2rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0 1rem;
       border: 1px solid #bdd6fd;
-      box-shadow: 0 15px 30px -12px rgba(0,67,126,0.15);
     }
     .pago-destacado {
       background: white;
-      border-radius: 2rem;
-      padding: 1.8rem 2rem;
+      border-radius: 1.5rem;
+      padding: 1.2rem 1.2rem;
       border-left: 6px solid #3b82f6;
-      box-shadow: 0 8px 18px rgba(0,30,70,0.08);
     }
     .pago-item {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      font-size: 1.15rem;
-      margin: 1rem 0;
-      padding: 0.5rem 1rem;
+      gap: 0.8rem;
+      font-size: 1rem;
+      margin: 0.8rem 0;
+      padding: 0.5rem 0.8rem;
       background: rgba(59,130,246,0.04);
       border-radius: 60px;
     }
@@ -271,180 +264,151 @@
       background: #3b82f6;
       color: white;
       border-radius: 50%;
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
+      font-size: 0.9rem;
     }
 
-    /* === CARRUSEL PROYECTOS === */
-    .carrusel-proyectos {
-      margin: 2rem 0 3rem;
+    /* === CARRUSEL POR CATEGORÍAS === */
+    .carrusel-categoria {
+      margin: 1.5rem 0 2.5rem;
     }
     .carrusel-grid {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       overflow-x: auto;
-      padding: 1rem 0.5rem 2rem;
+      padding: 0.5rem 0.2rem 1.2rem;
       scrollbar-width: thin;
       scrollbar-color: #3b82f6 #e2e8f0;
+      -webkit-overflow-scrolling: touch;
     }
-    .carrusel-grid::-webkit-scrollbar { height: 8px; }
+    .carrusel-grid::-webkit-scrollbar { height: 6px; }
     .carrusel-grid::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 20px; }
     .carrusel-grid::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 20px; }
+    
     .proyecto-item {
-      min-width: 280px;
-      background: linear-gradient(145deg, #ffffff, #f8fcff);
-      border-radius: 2rem;
-      padding: 1.5rem;
-      box-shadow: 0 12px 25px -8px rgba(0, 30, 70, 0.2);
+      min-width: 180px;
+      max-width: 200px;
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1rem;
+      box-shadow: 0 12px 25px -8px rgba(0, 30, 70, 0.15);
       border: 1px solid #d6e3ff;
       transition: transform 0.2s;
     }
     .proyecto-item:hover { transform: translateY(-5px); }
+    
     .proyecto-imagen {
       width: 100%;
-      height: 180px;
-      border-radius: 1.2rem;
-      margin-bottom: 1rem;
+      height: 160px;
+      border-radius: 1rem;
+      margin-bottom: 0.8rem;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       border: 2px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: opacity 0.2s;
     }
-    .proyecto-item:nth-child(1) .proyecto-imagen { background-image: url('1.png'); }
-    .proyecto-item:nth-child(2) .proyecto-imagen { background-image: url('2.png'); }
-    .proyecto-item:nth-child(3) .proyecto-imagen { background-image: url('3.png'); }
-    .proyecto-item:nth-child(4) .proyecto-imagen { background-image: url('4.png'); }
-    .proyecto-item:nth-child(5) .proyecto-imagen { background-image: url('5.png'); }
-    .proyecto-titulo { font-size: 1.3rem; font-weight: 600; color: #0c4a6e; }
+    .proyecto-imagen:active {
+      opacity: 0.8;
+    }
+    .proyecto-titulo { 
+      font-size: 1rem; 
+      font-weight: 600; 
+      color: #0c4a6e;
+      margin-bottom: 0.3rem;
+    }
     .proyecto-badge {
       display: inline-block;
       background: #e0edff;
       color: #024b8a;
-      padding: 0.3rem 1rem;
+      padding: 0.2rem 0.8rem;
       border-radius: 30px;
-      font-size: 0.8rem;
-      margin-top: 1rem;
+      font-size: 0.7rem;
     }
 
     /* === CLIENTES SATISFECHOS === */
     .clientes-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
     }
     .cliente-card {
       background: white;
-      border-radius: 2rem;
-      padding: 1.5rem 1rem;
+      border-radius: 1.5rem;
+      padding: 1.2rem 0.8rem;
       text-align: center;
       box-shadow: 0 8px 20px -6px rgba(0,32,64,0.12);
       border: 1px solid #d9e7fa;
     }
     .cliente-imagen {
-      width: 110px;
-      height: 110px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      margin: 0 auto 1.2rem;
-      border: 4px solid white;
-      box-shadow: 0 8px 0 #1e3f6e;
+      margin: 0 auto 0.8rem;
+      border: 3px solid white;
+      box-shadow: 0 5px 0 #1e3f6e;
       background-size: cover;
       background-position: center;
+      background-color: #e0edff;
     }
     .cliente-card:nth-child(1) .cliente-imagen { background-image: url('cliente1.png'); }
     .cliente-card:nth-child(2) .cliente-imagen { background-image: url('cliente2.png'); }
     .cliente-card:nth-child(3) .cliente-imagen { background-image: url('cliente3.png'); }
     .cliente-card:nth-child(4) .cliente-imagen { background-image: url('cliente4.png'); }
     .cliente-card:nth-child(5) .cliente-imagen { background-image: url('cliente5.png'); }
-    .cliente-nombre { font-weight: 700; color: #0b2f54; font-size: 1.2rem; }
-    .cliente-estrellas { color: #f5b342; font-size: 1.2rem; letter-spacing: 3px; margin-top: 0.4rem; }
+    .cliente-nombre { font-weight: 700; color: #0b2f54; font-size: 1rem; }
+    .cliente-estrellas { color: #f5b342; font-size: 1rem; margin-top: 0.3rem; }
 
-    /* === EQUIPO DE INGENIEROS (CON FOTOS REDONDAS) === */
-    .equipo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0 2.5rem;
-    }
-    .ingeniero-card {
+    /* === EQUIPO (SOLO NOMBRES, SIN FOTOS) === */
+    .equipo-simple {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
       background: linear-gradient(135deg, #f0f7ff, #ffffff);
-      border-radius: 2.2rem;
-      padding: 2rem 1.5rem 1.8rem;
-      text-align: center;
+      border-radius: 3rem;
+      padding: 2rem 1rem;
       border: 1px solid #c7dfff;
-      box-shadow: 0 16px 30px -12px rgba(1, 42, 92, 0.2);
     }
-    .ingeniero-avatar {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      margin: 0 auto 1.2rem;
-      border: 4px solid white;
-      box-shadow: 0 8px 0 #193e6e;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #b1d0ff; /* fallback */
-    }
-    /* Aquí asignas las fotos reales de cada ingeniero */
-    .ingeniero-card:nth-child(1) .ingeniero-avatar { background-image: url('junior.jpg'); }
-    .ingeniero-card:nth-child(2) .ingeniero-avatar { background-image: url('kevin.jpg'); }
-    .ingeniero-card:nth-child(3) .ingeniero-avatar { background-image: url('hector.jpg'); }
-    .ingeniero-nombre {
-      font-size: 1.8rem;
+    .equipo-nombre {
+      background: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 60px;
       font-weight: 700;
       color: #0b2b4a;
-      margin-bottom: 0.3rem;
-    }
-    .ingeniero-rol {
-      background: #1e3f6e;
-      color: white;
-      padding: 0.4rem 1.2rem;
-      border-radius: 40px;
-      display: inline-block;
-      font-size: 0.95rem;
-      margin: 1rem 0 0.8rem;
-    }
-    .ingeniero-especialidad {
-      color: #2c4d78;
-      font-weight: 500;
-      font-size: 1rem;
-      border-top: 2px dashed #c2d8ff;
-      padding-top: 1rem;
-    }
-    .ingeniero-destacado {
-      background: #dcf0ff;
-      border-radius: 2rem;
-      padding: 0.8rem;
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      border: 1px solid #a7c6fc;
+      border: 2px solid #3b82f6;
+      box-shadow: 0 5px 0 #1e3f6e;
+      font-size: 1.2rem;
     }
 
-    /* === REDES SOCIALES === */
+    /* === REDES SOCIALES CON LOGOS MODERNOS === */
     .redes-sociales {
       background: linear-gradient(145deg, #e9f0fc, #ffffff);
-      border-radius: 4rem;
-      padding: 2rem 2.5rem;
-      margin: 2.5rem 0 1rem;
+      border-radius: 3rem;
+      padding: 1.8rem 1.5rem;
+      margin: 2rem 0 1rem;
       text-align: center;
       border: 1px solid #b9d2fc;
     }
     .redes-titulo {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 600;
       color: #113355;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
     .redes-icons {
       display: flex;
       justify-content: center;
-      gap: 3rem;
+      gap: 2rem;
       flex-wrap: wrap;
     }
     .redes-icons a {
@@ -458,44 +422,84 @@
     }
     .redes-icons a:hover { transform: scale(1.1); }
     .redes-icon {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
       background: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.2rem;
+      font-size: 2rem;
       box-shadow: 0 10px 15px -5px rgba(0,60,130,0.3);
       border: 2px solid white;
     }
-    .redes-nombre {
-      color: #1e3f6e;
-      font-size: 1rem;
-    }
+    .redes-icon.facebook { background: #1877F2; color: white; }
+    .redes-icon.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5); color: white; }
+    .redes-icon.tiktok { background: #000000; color: white; }
+    .redes-nombre { color: #1e3f6e; font-size: 0.9rem; }
+
     .footer-note {
-      margin-top: 3rem;
+      margin-top: 2rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       background: #f0f4fa;
-      padding: 1.2rem 2rem;
+      padding: 1rem 1.5rem;
       border-radius: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
     }
 
-    /* === RESPONSIVE === */
-    @media (max-width: 700px) {
-      .portada { height: 300px; }
-      .portada-contenido h1 { font-size: 2.3rem; }
-      .hero p { max-width: 100%; }
+    /* === LIGHTBOX PARA VER IMÁGENES === */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 20px;
+      border: 4px solid white;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 3rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* === RESPONSIVE FINO === */
+    @media (max-width: 480px) {
+      .portada { height: 200px; }
+      .portada-contenido h1 { font-size: 1.8rem; }
+      .portada-contenido .portada-lema { font-size: 1rem; }
+      h2 { font-size: 1.5rem; }
+      .categoria-titulo { font-size: 1.3rem; }
+      .proyecto-item { min-width: 150px; }
+      .proyecto-imagen { height: 130px; }
     }
   </style>
 </head>
 <body>
 <div class="contenedor">
 
-  <!-- PORTADA (INTACTA) -->
+  <!-- PORTADA -->
   <div class="portada-wrapper">
     <div class="portada">
       <div class="portada-contenido">
@@ -516,65 +520,110 @@
   <h1>💻 Desarrollo de Software · Páginas Web · Apps Móviles</h1>
   <div class="hero">
     <p><strong>Desarrollamos soluciones tecnológicas modernas, seguras y adaptadas</strong> a las necesidades de tu negocio.</p>
-    <p>Nuestro objetivo es ayudarte a digitalizar tus procesos, mejorar tu imagen profesional y aumentar tus ventas.</p>
-    <p style="margin-top: 1rem;">Creamos desde páginas informativas hasta sistemas empresariales completos.</p>
+    <p>Creamos desde páginas informativas hasta sistemas empresariales completos.</p>
   </div>
 
-  <!-- SERVICIOS (se mantienen igual) -->
+  <!-- SERVICIOS -->
   <h2>⚙️ Nuestros servicios</h2>
   <div class="servicios-grid">
-    <!-- PÁGINA WEB ESTÁTICA -->
     <div class="card">
       <div class="emoji-tag">🌐</div>
       <h4>Página Web Estática</h4>
       <p>Presencia profesional en internet con diseño personalizado.</p>
-      <ul><li>Diseño responsive</li><li>Secciones inicio, servicios, contacto</li><li>Optimización de velocidad</li><li>Publicación incluida</li></ul>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20P%C3%A1gina%20Web%20Est%C3%A1tica" target="_blank" class="whatsapp-card-btn"><span>📲</span> Cotizar</a>
+      <ul><li>Diseño responsive</li><li>Secciones inicio, servicios, contacto</li><li>Publicación incluida</li></ul>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20P%C3%A1gina%20Web%20Est%C3%A1tica" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar</a>
     </div>
-    <!-- SOFTWARE WEB -->
     <div class="card">
       <div class="emoji-tag">🖥️</div>
       <h4>Sistema Web Gestión</h4>
       <p>Optimiza procesos con inventarios, usuarios y reportes.</p>
       <ul><li>Gestión de inventarios</li><li>Panel administrativo</li><li>Reportes y estadísticas</li></ul>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20Software%20Web%20con%20Base%20de%20Datos" target="_blank" class="whatsapp-card-btn"><span>📲</span> Cotizar</a>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20Software%20Web%20con%20Base%20de%20Datos" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar</a>
     </div>
-    <!-- APLICACIONES MÓVILES -->
     <div class="card">
       <div class="emoji-tag">📱</div>
       <h4>Apps Móviles</h4>
       <p>Android e iOS. Gestión empresarial, apps para clientes.</p>
       <ul><li>Integración con web</li><li>Solución completa</li></ul>
-      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20Apps%20M%C3%B3viles" target="_blank" class="whatsapp-card-btn"><span>📲</span> Cotizar</a>
+      <a href="https://wa.me/573242939824?text=Hola%2C%20AYOTI%2C%20quiero%20informaci%C3%B3n%20sobre%20Apps%20M%C3%B3viles" target="_blank" class="whatsapp-card-btn"><i class="fab fa-whatsapp"></i> Cotizar</a>
     </div>
   </div>
 
-  <!-- MODALIDAD DE PAGO FLEXIBLE (mejorada) -->
+  <!-- MODALIDAD DE PAGO -->
   <h2>💳 Modalidad de Pago Flexible</h2>
   <div class="pago-container">
     <div class="pago-destacado">
       <div class="pago-item"><span class="pago-check">✓</span> <strong>Pago de contado o mensual</strong> (elige la opción que más te convenga)</div>
       <div class="pago-item"><span class="pago-check">✓</span> <strong>Mantenimiento incluido:</strong> soporte, actualizaciones, hosting</div>
-      <p style="margin-top: 1.8rem; padding: 1rem; background: #e6f0ff; border-radius: 2rem;">
-        <span style="font-weight: 700;">📌 El valor de mantenimiento depende de:</span> nivel de soporte, actualizaciones, hosting/almacenamiento y complejidad del sistema.
+      <p style="margin-top: 1.5rem; padding: 0.8rem; background: #e6f0ff; border-radius: 2rem; font-size: 0.9rem;">
+        📌 El valor de mantenimiento depende del nivel de soporte, actualizaciones y complejidad.
       </p>
-      <p style="margin-top: 1rem; font-size: 1.1rem;">📆 <strong>Consultar planes personalizados sin compromiso</strong></p>
     </div>
   </div>
 
-  <!-- ===== SECCIONES FINALES (proyectos, clientes, equipo) ===== -->
+  <!-- ===== PROYECTOS POR CATEGORÍAS ===== -->
   <h2>📸 Proyectos recientes</h2>
-  <div class="carrusel-proyectos">
+  
+  <!-- CATEGORÍA: SOFTWARE BARBERÍA (imágenes locales) -->
+  <div class="categoria-titulo">
+    <i class="fas fa-cut"></i> Software Barbería
+  </div>
+  <div class="carrusel-categoria">
     <div class="carrusel-grid">
-      <div class="proyecto-item"><div class="proyecto-imagen"></div><div class="proyecto-titulo">Sistema inventarios</div><span class="proyecto-badge">web app</span></div>
-      <div class="proyecto-item"><div class="proyecto-imagen"></div><div class="proyecto-titulo">App delivery</div><span class="proyecto-badge">flutter</span></div>
-      <div class="proyecto-item"><div class="proyecto-imagen"></div><div class="proyecto-titulo">Página corporativa</div><span class="proyecto-badge">react</span></div>
-      <div class="proyecto-item"><div class="proyecto-imagen"></div><div class="proyecto-titulo">CRM a medida</div><span class="proyecto-badge">laravel</span></div>
-      <div class="proyecto-item"><div class="proyecto-imagen"></div><div class="proyecto-titulo">App servicios</div><span class="proyecto-badge">kotlin</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('1.png')"><div class="proyecto-imagen" style="background-image: url('1.png')"></div><div class="proyecto-titulo">Sistema de Turnos</div><span class="proyecto-badge">Barbería</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('2.png')"><div class="proyecto-imagen" style="background-image: url('2.png')"></div><div class="proyecto-titulo">Gestión Clientes</div><span class="proyecto-badge">Barbería</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('3.png')"><div class="proyecto-imagen" style="background-image: url('3.png')"></div><div class="proyecto-titulo">Inventario Productos</div><span class="proyecto-badge">Barbería</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('4.png')"><div class="proyecto-imagen" style="background-image: url('4.png')"></div><div class="proyecto-titulo">Caja Diaria</div><span class="proyecto-badge">Barbería</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('5.png')"><div class="proyecto-imagen" style="background-image: url('5.png')"></div><div class="proyecto-titulo">Reportes</div><span class="proyecto-badge">Barbería</span></div>
     </div>
-    <p style="text-align: right; color: #4f6f9f;">← desliza →</p>
   </div>
 
+  <!-- CATEGORÍA: SOFTWARE PRÉSTAMOS (imágenes locales) -->
+  <div class="categoria-titulo">
+    <i class="fas fa-hand-holding-usd"></i> Software Préstamos
+  </div>
+  <div class="carrusel-categoria">
+    <div class="carrusel-grid">
+      <div class="proyecto-item" onclick="abrirImagen('prestamo1.png')"><div class="proyecto-imagen" style="background-image: url('prestamo1.png')"></div><div class="proyecto-titulo">Gestión de Préstamos</div><span class="proyecto-badge">Fintech</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('prestamo2.png')"><div class="proyecto-imagen" style="background-image: url('prestamo2.png')"></div><div class="proyecto-titulo">Cobranzas</div><span class="proyecto-badge">Préstamos</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('prestamo3.png')"><div class="proyecto-imagen" style="background-image: url('prestamo3.png')"></div><div class="proyecto-titulo">Calculadora de Interés</div><span class="proyecto-badge">Préstamos</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('prestamo4.png')"><div class="proyecto-imagen" style="background-image: url('prestamo4.png')"></div><div class="proyecto-titulo">Historial de Pagos</div><span class="proyecto-badge">Préstamos</span></div>
+    </div>
+  </div>
+
+  <!-- CATEGORÍA: PÁGINAS WEB (imágenes locales) -->
+  <div class="categoria-titulo">
+    <i class="fas fa-globe"></i> Páginas Web
+  </div>
+  <div class="carrusel-categoria">
+    <div class="carrusel-grid">
+      <div class="proyecto-item" onclick="abrirImagen('web1.png')"><div class="proyecto-imagen" style="background-image: url('web1.png')"></div><div class="proyecto-titulo">Corporativa</div><span class="proyecto-badge">Web</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('web2.png')"><div class="proyecto-imagen" style="background-image: url('web2.png')"></div><div class="proyecto-titulo">E-commerce</div><span class="proyecto-badge">Web</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('web3.png')"><div class="proyecto-imagen" style="background-image: url('web3.png')"></div><div class="proyecto-titulo">Landing Page</div><span class="proyecto-badge">Web</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('web4.png')"><div class="proyecto-imagen" style="background-image: url('web4.png')"></div><div class="proyecto-titulo">Portafolio</div><span class="proyecto-badge">Web</span></div>
+    </div>
+  </div>
+
+  <!-- CATEGORÍA: APLICACIONES MÓVILES (10 imágenes DE INTERNET) -->
+  <div class="categoria-titulo">
+    <i class="fas fa-mobile-alt"></i> Aplicaciones Móviles
+  </div>
+  <div class="carrusel-categoria">
+    <div class="carrusel-grid">
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400')"></div><div class="proyecto-titulo">WhatsApp</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400')"></div><div class="proyecto-titulo">Instagram</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400')"></div><div class="proyecto-titulo">Facebook</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162616308-2a8a6b14a1e3?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162616308-2a8a6b14a1e3?w=400')"></div><div class="proyecto-titulo">Twitter</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617263-4ec3060a058e?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617263-4ec3060a058e?w=400')"></div><div class="proyecto-titulo">TikTok</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162616478-46e635b6868a?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162616478-46e635b6868a?w=400')"></div><div class="proyecto-titulo">YouTube</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162616679-2c8d3a4c1c6d?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162616679-2c8d3a4c1c6d?w=400')"></div><div class="proyecto-titulo">Spotify</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617217-697a6c9b3b8a?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617217-697a6c9b3b8a?w=400')"></div><div class="proyecto-titulo">Netflix</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617246-2b1c7a7a4c8b?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617246-2b1c7a7a4c8b?w=400')"></div><div class="proyecto-titulo">Uber</div><span class="proyecto-badge">App Móvil</span></div>
+      <div class="proyecto-item" onclick="abrirImagen('https://images.unsplash.com/photo-1611162617269-4d3e7b1a9c2d?w=400')"><div class="proyecto-imagen" style="background-image: url('https://images.unsplash.com/photo-1611162617269-4d3e7b1a9c2d?w=400')"></div><div class="proyecto-titulo">Google Maps</div><span class="proyecto-badge">App Móvil</span></div>
+    </div>
+  </div>
+
+  <!-- CLIENTES SATISFECHOS -->
   <h2>🤝 Clientes satisfechos</h2>
   <div class="clientes-grid">
     <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Distribuidora XYZ</div><div class="cliente-estrellas">★★★★★</div></div>
@@ -584,48 +633,28 @@
     <div class="cliente-card"><div class="cliente-imagen"></div><div class="cliente-nombre">Fintech Andes</div><div class="cliente-estrellas">★★★★★</div></div>
   </div>
 
+  <!-- EQUIPO SOLO NOMBRES (SIN FOTOS) -->
   <h2>🧑‍💻 Nuestro equipo de ingenieros</h2>
-  <div class="equipo-grid">
-    <!-- Junior Causil (foto junior.jpg) -->
-    <div class="ingeniero-card">
-      <div class="ingeniero-avatar"></div>
-      <div class="ingeniero-nombre">Junior Causil</div>
-      <span class="ingeniero-rol">Ingeniero de Sistemas</span>
-      <div class="ingeniero-especialidad">🎨 Frontend · UI/UX</div>
-      <div class="ingeniero-destacado">Especialista en experiencias digitales</div>
-    </div>
-    <!-- Kevin Boca Negra (foto kevin.jpg) -->
-    <div class="ingeniero-card">
-      <div class="ingeniero-avatar"></div>
-      <div class="ingeniero-nombre">Kevin Boca Negra</div>
-      <span class="ingeniero-rol">Ingeniero de Sistemas</span>
-      <div class="ingeniero-especialidad">⚙️ Backend · APIs · Bases de datos</div>
-      <div class="ingeniero-destacado">Arquitectura escalable y robusta</div>
-    </div>
-    <!-- Héctor Chamorro (foto hector.jpg) -->
-    <div class="ingeniero-card">
-      <div class="ingeniero-avatar"></div>
-      <div class="ingeniero-nombre">Héctor Chamorro</div>
-      <span class="ingeniero-rol">Ingeniero de Sistemas</span>
-      <div class="ingeniero-especialidad">🔧 Backend · DevOps · Arquitectura</div>
-      <div class="ingeniero-destacado">Optimización y rendimiento</div>
-    </div>
+  <div class="equipo-simple">
+    <span class="equipo-nombre">Junior Causil</span>
+    <span class="equipo-nombre">Kevin Boca Negra</span>
+    <span class="equipo-nombre">Héctor Chamorro</span>
   </div>
 
-  <!-- REDES SOCIALES (Facebook, Instagram, TikTok) -->
+  <!-- REDES SOCIALES CON LOGOS MODERNOS -->
   <div class="redes-sociales">
     <div class="redes-titulo">📱 Síguenos en nuestras redes</div>
     <div class="redes-icons">
       <a href="#" target="_blank">
-        <div class="redes-icon" style="background: #1877F2; color: white;">f</div>
+        <div class="redes-icon facebook"><i class="fab fa-facebook-f"></i></div>
         <span class="redes-nombre">Facebook</span>
       </a>
       <a href="#" target="_blank">
-        <div class="redes-icon" style="background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB); color: white;">📷</div>
+        <div class="redes-icon instagram"><i class="fab fa-instagram"></i></div>
         <span class="redes-nombre">Instagram</span>
       </a>
       <a href="#" target="_blank">
-        <div class="redes-icon" style="background: #000000; color: white;">🎵</div>
+        <div class="redes-icon tiktok"><i class="fab fa-tiktok"></i></div>
         <span class="redes-nombre">TikTok</span>
       </a>
     </div>
@@ -637,5 +666,29 @@
   </div>
 
 </div>
+
+<!-- LIGHTBOX PARA VER IMÁGENES -->
+<div class="lightbox" id="lightbox" onclick="cerrarImagen()">
+  <span class="lightbox-close" onclick="cerrarImagen()">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  function abrirImagen(url) {
+    document.getElementById('lightbox-img').src = url;
+    document.getElementById('lightbox').classList.add('active');
+  }
+  
+  function cerrarImagen() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  // Cerrar con tecla ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      cerrarImagen();
+    }
+  });
+</script>
 </body>
 </html>
