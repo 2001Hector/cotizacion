@@ -749,6 +749,498 @@
     <p>💡 <strong>AYOTI</strong> – Automatización y Optimización Tecnológica Integral · Transformamos tus ideas en software</p>
   </div>
 
+    <style>
+        .masonry-wrapper {
+            width: 100%;
+            max-width: 85%;
+            margin: 0 auto;
+        }
+
+        /* Standard Masonry */
+        .masonry-container {
+            column-count: 1;
+            column-gap: 28px;
+            width: 100%;
+        }
+        
+        @media (min-width: 640px) {
+            .masonry-container {
+                column-count: 2;
+            }
+        }
+
+        /* Scroll Animations */
+        @keyframes scrollVertical {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        .scroll-track {
+            animation: scrollVertical linear infinite;
+             /* Ensure no line-height causes gaps when using block images */
+            line-height: 0;
+        }
+
+        /* Hover Triggers */
+        .group:hover .overlay-bg {
+            opacity: 1 !important;
+        }
+        .group:hover .overlay-content {
+            opacity: 1 !important;
+            transform: translateY(0) scale(1) !important;
+        }
+
+        /* Entry Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+            animation-fill-mode: forwards;
+        }
+        .animate-slide-up {
+            opacity: 0;
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+
+    <div class="masonry-wrapper">
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; height: 600px; overflow: hidden;">
+            
+            <div class="scroll-column" style="height: 100%; overflow: hidden; position: relative; mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%); min-width: 0;">
+                <div class="scroll-track" style="animation-duration: 100s; animation-direction: normal; display: flex; flex-direction: column;">
+                     
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=60" 
+                alt="Yosemite" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Yosemite</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Valley view</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&auto=format&fit=crop&q=60" 
+                alt="Morning Fog" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Morning Fog</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Nature's silence</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=60" 
+                alt="Yosemite" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Yosemite</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Valley view</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&auto=format&fit=crop&q=60" 
+                alt="Morning Fog" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Morning Fog</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Nature's silence</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=60" 
+                alt="Yosemite" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Yosemite</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Valley view</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&auto=format&fit=crop&q=60" 
+                alt="Morning Fog" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Morning Fog</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Nature's silence</p>
+                </div>
+            </div>
+            
+        </a>
+      
+                     
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=60" 
+                alt="Yosemite" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Yosemite</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Valley view</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&auto=format&fit=crop&q=60" 
+                alt="Morning Fog" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Morning Fog</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Nature's silence</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=60" 
+                alt="Yosemite" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Yosemite</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Valley view</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&auto=format&fit=crop&q=60" 
+                alt="Morning Fog" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Morning Fog</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Nature's silence</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=60" 
+                alt="Yosemite" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Yosemite</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Valley view</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&auto=format&fit=crop&q=60" 
+                alt="Morning Fog" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Morning Fog</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Nature's silence</p>
+                </div>
+            </div>
+            
+        </a>
+      
+                </div>
+            </div>
+          
+            <div class="scroll-column" style="height: 100%; overflow: hidden; position: relative; mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%); min-width: 0;">
+                <div class="scroll-track" style="animation-duration: 100s; animation-direction: reverse; display: flex; flex-direction: column;">
+                     
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60" 
+                alt="Minimalist Hall" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Minimalist Hall</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Architectural symmetry</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&auto=format&fit=crop&q=60" 
+                alt="Urban Architecture" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Urban Architecture</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">City perspectives</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60" 
+                alt="Minimalist Hall" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Minimalist Hall</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Architectural symmetry</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&auto=format&fit=crop&q=60" 
+                alt="Urban Architecture" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Urban Architecture</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">City perspectives</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60" 
+                alt="Minimalist Hall" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Minimalist Hall</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Architectural symmetry</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&auto=format&fit=crop&q=60" 
+                alt="Urban Architecture" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Urban Architecture</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">City perspectives</p>
+                </div>
+            </div>
+            
+        </a>
+      
+                     
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60" 
+                alt="Minimalist Hall" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Minimalist Hall</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Architectural symmetry</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&auto=format&fit=crop&q=60" 
+                alt="Urban Architecture" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Urban Architecture</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">City perspectives</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60" 
+                alt="Minimalist Hall" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Minimalist Hall</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Architectural symmetry</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&auto=format&fit=crop&q=60" 
+                alt="Urban Architecture" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Urban Architecture</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">City perspectives</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60" 
+                alt="Minimalist Hall" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Minimalist Hall</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">Architectural symmetry</p>
+                </div>
+            </div>
+            
+        </a>
+      
+        <a href="#" target="_blank" class="relative block overflow-hidden group   " style="margin-bottom: 28px; border-radius: 9px;  cursor: pointer; background-color: #1a1a1a;">
+            <img 
+                src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&auto=format&fit=crop&q=60" 
+                alt="Urban Architecture" 
+                class="w-full h-auto block transition-all duration-700 group-hover:scale-110"
+            />
+            
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 overlay-bg" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); opacity: 0; transition: opacity 0.3s ease;">
+                <div class="overlay-content" style="opacity: 0; transform: translateY(20px); transition: all 0.3s ease;">
+                    <h3 class="text-lg font-bold mb-1" style="color: #ffffff;">Urban Architecture</h3>
+                    <p class="text-sm opacity-90" style="color: #ffffff;">City perspectives</p>
+                </div>
+            </div>
+            
+        </a>
+      
+                </div>
+            </div>
+          
+        </div>
+      
+    </div>
+  
 </div>
 </body>
 </html>
